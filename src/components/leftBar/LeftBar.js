@@ -1,13 +1,13 @@
 import React from 'react';
 
-class SlideMenu extends React.Component {
+class LeftBar extends React.Component {
   render() {
     return(
       <div>
-        123
+        LeftBar
       </div>
     )
   }
 }
 
-export default SlideMenu;
+export default LeftBar;
