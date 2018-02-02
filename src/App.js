@@ -1,15 +1,20 @@
 import React from 'react';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-
-import Project from './Project'
-
+import Main from './Main'
+import './App.css'
+import LeftBar from './components/leftBar/LeftBar';
+import TopBar from './components/topBar/TopBar';
 
 class App extends React.Component {
   render() {
     return (
-      <MuiThemeProvider>
-        <Project/>
-      </MuiThemeProvider>
+      <div className='Project'>
+
+        <TopBar/>
+        <LeftBar/>
+        <Main/>
+
+
+      </div>
     );
   }
 }
