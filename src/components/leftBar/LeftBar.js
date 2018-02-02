@@ -4,7 +4,6 @@ import './LeftBar.css'
 
 import logo from '../../assets/img/logo.png'
 
-
 class LeftBar extends React.Component {
   render() {
     return(
