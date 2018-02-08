@@ -1,0 +1,19 @@
+.Authentication {
+  min-height: 100vh;
+  background: url("../../assets/img/auth-bg.png") 50% 50% no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.auth-box {
+  padding: 35px;
+  width: 60%;
+  background: #0e1a35; }
+
+.reg {
+  float: right;
+  display: inline-block;
+  width: 60%; }
+  .reg > div {
+    background-color: red; }

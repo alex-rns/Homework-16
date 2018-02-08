@@ -33,6 +33,9 @@ class LeftBar extends React.Component {
             <li className="nav-item">
               <NavLink exact to="/settings"> Settings </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink exact to="/authentication"> Authentication </NavLink>
+            </li>
           </ul>
         </nav>
       </div>
