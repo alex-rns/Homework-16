@@ -24,7 +24,7 @@ const PrivateLayout = ({component: Component, ...rest}) => {
           </div>
         )
       } else {
-        return <h1>ERROOOOOOOOR!</h1>
+        return <h1>ERROOOOOOOOR!</h1>;
       }
 
 
