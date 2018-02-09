@@ -16,4 +16,4 @@
   display: inline-block;
   width: 60%; }
   .reg > div {
-    background-color: red; }
+    background-color: inherit !important; }
