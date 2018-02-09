@@ -5,6 +5,7 @@ import Login from './Login'
 import './Authentication.css'
 
 import logo from '../../assets/img/logo.png'
+import Registration from "./Registration";
 
 
 class Authentication extends React.Component {
@@ -22,8 +23,8 @@ class Authentication extends React.Component {
     });
   };
 
-  render(){
-    return(
+  render() {
+    return (
       <div className='Authentication'>
         <div className='auth-box'>
           <div className='auth-box-header'>
@@ -34,22 +35,23 @@ class Authentication extends React.Component {
               onChange={this.handleChange}
               value={this.state.slideIndex}
             >
-              <Tab className='register' label="Tab One" value={0} />
-              <Tab className='login' label="Tab Two" value={1} />
+              <Tab className='register' label="Login" value={0}/>
+              <Tab className='login' label="Registration" value={1}/>
             </Tabs>
 
             <SwipeableViews
               index={this.state.slideIndex}
               onChangeIndex={this.handleChange}
             >
-              {Login}
-              <div>
-                slide n°22
-              </div>
+
+              <Login/>
+
+              <Registration/>
+
             </SwipeableViews>
           </div>
-          </div>
         </div>
+      </div>
     )
   }
 }
