@@ -13,14 +13,17 @@ class Login extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     console.log('username - ', this.state.username, 'pass - ', this.state.password);
+
     let username = JSON.parse(localStorage.getItem("username"));
+    let password = JSON.parse(localStorage.getItem("password"));
 
     console.log(username, this.state.username);
+    console.log(password, this.state.password);
 
-    if(username === this.state.username){
-      console.log('user should log in');
+    if((username === this.state.username)&&(password === this.state.password)){
+      console.log('user should login');
     } else {
-      console.log('error');
+      console.log('wrong name or password');
     }
   };
 
@@ -40,8 +43,18 @@ class Login extends React.Component {
         LOGIN
         <form onSubmit={this.handleSubmit}>
           <button>Submit</button>
-          <input type="text" name='username' value={this.state.username} onChange={this.handleChange}/>
-          <input type="password" name='password' value={this.state.country} onChange={this.handleChange}/>
+          <input
+            type="text"
+            name='username'
+            value={this.state.username}
+            onChange={this.handleChange}
+          />
+          <input
+            type="password"
+            name='password'
+            value={this.state.password}
+            onChange={this.handleChange}
+          />
         </form>
 
       </div>

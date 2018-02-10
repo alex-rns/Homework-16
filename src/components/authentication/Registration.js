@@ -12,8 +12,9 @@ class Registration extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log('username - ', this.state.username, 'pass - ', this.state.password);
+    console.log('your username - ', this.state.username, 'your pass - ', this.state.password);
     localStorage.setItem("username", JSON.stringify(this.state.username));
+    localStorage.setItem("password", JSON.stringify(this.state.password));
   };
 
   handleChange = (e) => {
@@ -32,8 +33,20 @@ class Registration extends React.Component {
           REGISTER
         <form onSubmit={this.handleSubmit}>
           <button>Submit</button>
-          <input type="text" name='username' value={this.state.username} onChange={this.handleChange}/>
-          <input type="password" name='password' value={this.state.country} onChange={this.handleChange}/>
+
+          <input
+            type="text"
+            name='username'
+            value={this.state.username}
+            onChange={this.handleChange}
+          />
+
+          <input
+            type="password"
+            name='password'
+            value={this.state.password}
+            onChange={this.handleChange}
+          />
         </form>
 
       </div>

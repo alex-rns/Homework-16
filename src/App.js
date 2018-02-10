@@ -1,49 +1,56 @@
 import React from 'react';
 import {Switch, Route, Redirect} from 'react-router-dom';
-// import {Route} from 'react-router-dom';
 import './App.css'
+import LeftBar from './components/leftBar/LeftBar';
+import TopBar from './components/topBar/TopBar';
 import Workflow from "./components/workflow/Workflow";
-import Login from "./components/authentication/Login";
-import Registration from "./components/authentication/Registration";
 import Calendar from "./components/calendar/Calendar";
 import Statistics from "./components/statistics/Statistics";
 import Settings from "./components/settings/Settings";
 import Home from "./components/home/Home";
-import Users from "./Private";
+import Users from "./components/users/Users";
 import Authentication from "./components/authentication/Authentication";
-
-
-const PrivateLayout = ({component: Component, ...rest}) => {
-  return (
-    <Route {...rest} render={() => {
-      let username = JSON.parse(localStorage.getItem("username"));
-
-      if (username === null) {
-        return <Component/>
-      } else {
-        return <Redirect to="/authentication"/>
-      }
-
-    }}/>
-  )
-};
 
 
 class App extends React.Component {
   render() {
+
+    const PrivateLayout = ({component: Component, ...rest}) => {
+      return (
+        <Route {...rest} render={matchProps => {
+          let username = JSON.parse(localStorage.getItem("username"));
+          let password = JSON.parse(localStorage.getItem("password"));
+
+          if ((username !== null) && (password !== null)) {
+            return (
+
+              <div className='Private'>
+                <TopBar/>
+                <LeftBar/>
+                <Component {...matchProps}/>
+              </div>
+            )
+          } else {
+            alert("Please log in");
+            return <Redirect to="/authentication"/>
+          }
+        }}/>
+      )
+    };
+
+
     return (
       <div className='App'>
         <Switch>
 
-
           <Route path="/authentication" component={Authentication}/>
 
-          <PrivateLayout exact path="/" component={Users}/>
-          <PrivateLayout exact path="/workflow" component={Users}/>
-          <PrivateLayout exact path="/statistics" component={Users}/>
-          <PrivateLayout exact path="/calendar" component={Users}/>
+          <PrivateLayout exact path="/" component={Home}/>
+          <PrivateLayout exact path="/workflow" component={Workflow}/>
+          <PrivateLayout exact path="/statistics" component={Statistics}/>
+          <PrivateLayout exact path="/calendar" component={Calendar}/>
           <PrivateLayout exact path="/users" component={Users}/>
-          <PrivateLayout exact path="/settings" component={Users}/>
+          <PrivateLayout exact path="/settings" component={Settings}/>
         </Switch>
 
       </div>
