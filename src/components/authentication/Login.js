@@ -1,6 +1,10 @@
 import React from 'react';
-
+import TextField from 'material-ui/TextField';
+import FontIcon from 'material-ui/FontIcon';
+import { blueA200 } from 'material-ui/styles/colors';
 class Login extends React.Component {
+
+
 
   constructor(props) {
     super(props);
@@ -38,23 +42,49 @@ class Login extends React.Component {
 
     console.log(this.state);
 
+    const iconStyles = {
+      marginRight: 22,
+      fontSize: 32
+    };
+
     return(
       <div className="Login">
         <h2 className={'welcome'}>Welcome <span>back!</span></h2>
-        <form onSubmit={this.handleSubmit}>
+        <form className='login-form' onSubmit={this.handleSubmit}>
+          <div>
+            <FontIcon
+              style={iconStyles}
+              className="material-icons"
+              color={blueA200}>person_outline
+            </FontIcon>
+            <TextField
+              hintText="Username"
+              type="text"
+              name='username'
+              value={this.state.username}
+              onChange={this.handleChange}
+            />
+          </div>
+          <div>
+            <FontIcon
+              style={iconStyles}
+              className="material-icons"
+              color={blueA200}>lock_outline
+            </FontIcon>
+            <TextField
+              hintText="Password"
+              type="password"
+              name='password'
+              value={this.state.password}
+              onChange={this.handleChange}
+
+            />
+          </div>
+
+
+
+
           <button>Submit</button>
-          <input
-            type="text"
-            name='username'
-            value={this.state.username}
-            onChange={this.handleChange}
-          />
-          <input
-            type="password"
-            name='password'
-            value={this.state.password}
-            onChange={this.handleChange}
-          />
         </form>
 
       </div>

@@ -30,8 +30,8 @@ class Registration extends React.Component {
 
     return(
       <div className="Registration">
-          REGISTER
-        <form onSubmit={this.handleSubmit}>
+        <h2 className={'welcome'}>Welcome!</h2>
+        <form className={'reg-form'} onSubmit={this.handleSubmit}>
           <button>Submit</button>
 
           <input
