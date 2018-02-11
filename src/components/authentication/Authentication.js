@@ -26,30 +26,33 @@ class Authentication extends React.Component {
   render() {
     return (
       <div className='Authentication'>
-        <div className='auth-box'>
-          <div className='auth-box-header'>
-            <img src={logo} alt="Logo"/>
+        <div className="auth-wrapp">
 
-            <Tabs
-              className='reg'
-              onChange={this.handleChange}
-              value={this.state.slideIndex}
-            >
-              <Tab className='register' label="Login" value={0}/>
-              <Tab className='login' label="Registration" value={1}/>
-            </Tabs>
+          <div className='auth-box'>
 
-            <SwipeableViews
-              index={this.state.slideIndex}
-              onChangeIndex={this.handleChange}
-            >
+              <img src={logo} alt="Logo"/>
 
-              <Login/>
+              <Tabs
+                className='auth'
+                onChange={this.handleChange}
+                value={this.state.slideIndex}
+              >
+                <Tab className='register' label="Register" value={0}/>
+                <Tab className='login' label="Login" value={1}/>
+              </Tabs>
 
-              <Registration/>
-
-            </SwipeableViews>
           </div>
+          <SwipeableViews
+            className={'views-wrap'}
+            index={this.state.slideIndex}
+            onChangeIndex={this.handleChange}
+          >
+            <Registration/>
+            <Login/>
+
+
+
+          </SwipeableViews>
         </div>
       </div>
     )

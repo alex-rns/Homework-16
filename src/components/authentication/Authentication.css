@@ -6,14 +6,45 @@
   align-items: center;
   justify-content: center; }
 
+.auth-wrapp {
+  width: 1200px; }
+
 .auth-box {
-  padding: 35px;
-  width: 60%;
+  padding: 35px 0 35px 35px;
   background: #0e1a35; }
 
-.reg {
+.auth {
+  position: relative;
   float: right;
   display: inline-block;
-  width: 60%; }
-  .reg > div {
+  width: 25%; }
+  .auth > div {
     background-color: inherit !important; }
+    .auth > div button {
+      font: 500 24px/48px Roboto, sans-serif !important;
+      text-transform: capitalize !important; }
+
+.auth:nth-child(2) > div > div {
+  height: 10px !important;
+  position: absolute !important;
+  bottom: -39px !important; }
+
+.views-wrap {
+  box-shadow: 0 0 139px rgba(147, 161, 185, 0.59);
+  background-color: #f6f7fa;
+  height: 350px;
+  display: flex;
+  justify-content: center; }
+
+.react-swipeable-view-container {
+  width: 100%; }
+
+.Login {
+  padding-top: 50px;
+  text-align: center; }
+
+.welcome {
+  color: #8492af;
+  font: 300 48px/14.4px Roboto, sans-serif; }
+  .welcome span {
+    color: #5384ff; }

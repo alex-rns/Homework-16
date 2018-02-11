@@ -40,7 +40,7 @@ class Login extends React.Component {
 
     return(
       <div className="Login">
-        LOGIN
+        <h2 className={'welcome'}>Welcome <span>back!</span></h2>
         <form onSubmit={this.handleSubmit}>
           <button>Submit</button>
           <input
