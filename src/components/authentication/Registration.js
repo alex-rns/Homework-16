@@ -55,6 +55,7 @@ class Registration extends React.Component {
               onChange={this.handleChange}
             />
           </div>
+
           <div>
             <FontIcon
               style={iconStyles}

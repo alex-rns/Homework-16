@@ -53,6 +53,7 @@ class Login extends React.Component {
       <div className="Login">
         <h2 className={'welcome'}>Welcome <span>back!</span></h2>
         <form className='login-form' onSubmit={this.handleSubmit}>
+
           <div>
             <FontIcon
               style={iconStyles}
@@ -67,6 +68,7 @@ class Login extends React.Component {
               onChange={this.handleChange}
             />
           </div>
+
           <div>
             <FontIcon
               style={iconStyles}
@@ -79,7 +81,6 @@ class Login extends React.Component {
               name='password'
               value={this.state.password}
               onChange={this.handleChange}
-
             />
           </div>
 
