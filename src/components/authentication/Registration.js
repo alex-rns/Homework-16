@@ -1,4 +1,8 @@
 import React from 'react';
+import TextField from 'material-ui/TextField';
+import FontIcon from 'material-ui/FontIcon';
+import { blueA200 } from 'material-ui/styles/colors';
+import WelcomeButton from '../buttons/WelcomeButton'
 
 class Registration extends React.Component {
 
@@ -28,25 +32,46 @@ class Registration extends React.Component {
 
     console.log(this.state);
 
+    const iconStyles = {
+      marginRight: 22,
+      fontSize: 32
+    };
+
     return(
       <div className="Registration">
         <h2 className={'welcome'}>Welcome!</h2>
-        <form className={'reg-form'} onSubmit={this.handleSubmit}>
-          <button>Submit</button>
+        <form className='reg-form' onSubmit={this.handleSubmit}>
+          <div>
+            <FontIcon
+              style={iconStyles}
+              className="material-icons"
+              color={blueA200}>person_outline
+            </FontIcon>
+            <TextField
+              hintText="Username"
+              type="text"
+              name='username'
+              value={this.state.username}
+              onChange={this.handleChange}
+            />
+          </div>
+          <div>
+            <FontIcon
+              style={iconStyles}
+              className="material-icons"
+              color={blueA200}>lock_outline
+            </FontIcon>
+            <TextField
+              hintText="Password"
+              type="password"
+              name='password'
+              value={this.state.password}
+              onChange={this.handleChange}
 
-          <input
-            type="text"
-            name='username'
-            value={this.state.username}
-            onChange={this.handleChange}
-          />
+            />
+          </div>
 
-          <input
-            type="password"
-            name='password'
-            value={this.state.password}
-            onChange={this.handleChange}
-          />
+          <WelcomeButton/>
         </form>
 
       </div>

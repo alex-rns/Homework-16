@@ -14,7 +14,7 @@ import App from './App';
 
 const muiTheme = getMuiTheme({
   palette: {
-    primary1Color: cyan500,
+    primary1Color: blueA200,
     primary2Color: cyan700,
     primary3Color: grey400,
 

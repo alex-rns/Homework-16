@@ -2,8 +2,10 @@ import React from 'react';
 import TextField from 'material-ui/TextField';
 import FontIcon from 'material-ui/FontIcon';
 import { blueA200 } from 'material-ui/styles/colors';
-class Login extends React.Component {
+import WelcomeButton from '../buttons/WelcomeButton'
 
+
+class Login extends React.Component {
 
 
   constructor(props) {
@@ -81,10 +83,7 @@ class Login extends React.Component {
             />
           </div>
 
-
-
-
-          <button>Submit</button>
+          <WelcomeButton/>
         </form>
 
       </div>
