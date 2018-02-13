@@ -1,22 +1,36 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { withStyles } from 'material-ui/styles';
 import Button from 'material-ui/Button';
 import Icon from 'material-ui/Icon';
 
 
-const style = {
-  borderRadius: 50
+const styles = theme => ({
+  button: {
+    margin: theme.spacing.unit
+  },
+  rightIcon: {
+    marginLeft: theme.spacing.unit,
+  },
+});
 
+
+function WelcomeButton(props) {
+  const { classes } = props;
+  return (
+    <div>
+      <Button className={classes.button} variant="raised" color="primary">
+        Enter
+        <Icon className={classes.rightIcon}>keyboard_arrow_right
+        </Icon>
+      </Button>
+
+
+
+    </div>
+  );
+}
+WelcomeButton.propTypes = {
+  classes: PropTypes.object.isRequired,
 };
-
-const WelcomeButton = () => (
-    <Button
-      label="Enter"
-      labelPosition="before"
-      icon={<Icon className="material-icons">keyboard_arrow_right
-      </Icon>}
-      primary={true}
-      style={style}
-    />
-);
-
-export default WelcomeButton;
+export default withStyles(styles)(WelcomeButton);

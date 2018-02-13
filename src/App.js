@@ -1,4 +1,5 @@
 import React from 'react';
+import Reboot from 'material-ui/Reboot';
 import {Switch, Route, Redirect} from 'react-router-dom';
 import './App.css'
 import LeftBar from './components/leftBar/LeftBar';
@@ -41,6 +42,7 @@ class App extends React.Component {
 
     return (
       <div className='App'>
+        <Reboot />
         <Switch>
 
           <Route path="/authentication" component={Authentication}/>

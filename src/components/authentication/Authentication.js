@@ -4,7 +4,6 @@ import {withStyles} from 'material-ui/styles';
 import SwipeableViews from 'react-swipeable-views';
 import Tabs, {Tab} from 'material-ui/Tabs';
 import Typography from 'material-ui/Typography';
-import AppBar from 'material-ui/AppBar';
 import Login from './Login'
 import './Authentication.css'
 import logo from '../../assets/img/logo.png'
@@ -20,7 +19,6 @@ function TabContainer({children, dir}) {
 }
 
 TabContainer.propTypes = {
-  children: PropTypes.node.isRequired,
   dir: PropTypes.string.isRequired,
 };
 
@@ -48,12 +46,11 @@ class Authentication extends React.Component {
 
     return (
 
-
       <div className={classes.root}>
         <div className="auth-wrapp">
           <div className='auth-box'>
             <img src={logo} alt="Logo"/>
-            <AppBar position="static" color="default">
+            <div>
               <Tabs
                 className="auth"
                 value={this.state.value}
@@ -65,16 +62,22 @@ class Authentication extends React.Component {
                 <Tab className='register' label="Register"/>
                 <Tab className='login' label="Login"/>
               </Tabs>
-            </AppBar>
+            </div>
           </div>
+
           <SwipeableViews
             className={'views-wrap'}
             axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
             index={this.state.value}
             onChangeIndex={this.handleChangeIndex}
           >
-            <TabContainer dir={theme.direction}><Registration/></TabContainer>
-            <TabContainer dir={theme.direction}><Login/></TabContainer>
+            <TabContainer dir={theme.direction}>
+              <Registration/>
+            </TabContainer>
+            <TabContainer dir={theme.direction}>
+              <Login/>
+            </TabContainer>
+
           </SwipeableViews>
         </div>
       </div>

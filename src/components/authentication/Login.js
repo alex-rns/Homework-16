@@ -55,13 +55,10 @@ class Login extends React.Component {
         <form className='login-form' onSubmit={this.handleSubmit}>
 
           <div>
-            <Icon
-              style={iconStyles}
-              className="material-icons"
-              color={blueA200}>person_outline
+            <Icon style={iconStyles} color="primary">person_outline
             </Icon>
             <TextField
-              hintText="Username"
+              label="Username"
               type="text"
               name='username'
               value={this.state.username}
@@ -70,17 +67,17 @@ class Login extends React.Component {
           </div>
 
           <div>
-            <Icon
-              style={iconStyles}
-              className="material-icons"
-              color={blueA200}>lock_outline
+            <Icon style={iconStyles} color="primary">lock_outline
             </Icon>
             <TextField
-              hintText="Password"
+              label="Password"
+              variant="password"
               type="password"
               name='password'
+              autoComplete="current-password"
               value={this.state.password}
               onChange={this.handleChange}
+
             />
           </div>
 

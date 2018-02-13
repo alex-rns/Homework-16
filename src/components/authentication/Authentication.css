@@ -10,20 +10,25 @@
   width: 60%; }
 
 .auth-box {
+  display: flex;
+  justify-content: space-between;
   padding: 35px 0 35px 35px;
   background: #0e1a35; }
 
-.auth {
-  position: relative;
-  float: right;
-  display: inline-block; }
-  .auth > div {
-    background-color: inherit !important; }
+.auth > div {
+  background-color: inherit !important; }
+  .auth > div button {
+    font: 500 24px/48px Roboto, sans-serif !important;
+    text-transform: capitalize !important; }
+
+.auth:nth-child(2) > div > div {
+  height: 10px !important;
+  position: absolute !important;
+  bottom: -39px !important; }
 
 .views-wrap {
   box-shadow: 0 0 139px rgba(147, 161, 185, 0.59);
   background-color: #f6f7fa;
-  height: 350px;
   display: flex;
   justify-content: center; }
 
