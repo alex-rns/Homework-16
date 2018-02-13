@@ -1,12 +1,12 @@
 import React from 'react';
-import RaisedButton from 'material-ui/RaisedButton'
+import Button from 'material-ui/Button'
 
 class Home extends React.Component {
   render() {
     return(
       <div className="Home">
         <h1>Home</h1>
-        <RaisedButton label="Test button" />
+        <Button label="Test button" />
       </div>
 
     )

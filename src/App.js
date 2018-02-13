@@ -15,7 +15,7 @@ import Authentication from "./components/authentication/Authentication";
 class App extends React.Component {
   render() {
 
-    const PrivateLayout = ({component: Component, ...rest}) => {
+    const PrivateRouter = ({component: Component, ...rest}) => {
       return (
         <Route {...rest} render={matchProps => {
           let username = JSON.parse(localStorage.getItem("username"));
@@ -45,12 +45,12 @@ class App extends React.Component {
 
           <Route path="/authentication" component={Authentication}/>
 
-          <PrivateLayout exact path="/" component={Home}/>
-          <PrivateLayout exact path="/workflow" component={Workflow}/>
-          <PrivateLayout exact path="/statistics" component={Statistics}/>
-          <PrivateLayout exact path="/calendar" component={Calendar}/>
-          <PrivateLayout exact path="/users" component={Users}/>
-          <PrivateLayout exact path="/settings" component={Settings}/>
+          <PrivateRouter exact path="/" component={Home}/>
+          <PrivateRouter exact path="/workflow" component={Workflow}/>
+          <PrivateRouter exact path="/statistics" component={Statistics}/>
+          <PrivateRouter exact path="/calendar" component={Calendar}/>
+          <PrivateRouter exact path="/users" component={Users}/>
+          <PrivateRouter exact path="/settings" component={Settings}/>
         </Switch>
 
       </div>

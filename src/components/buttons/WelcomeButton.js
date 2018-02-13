@@ -1,6 +1,6 @@
 import React from 'react';
-import RaisedButton from 'material-ui/RaisedButton';
-import FontIcon from 'material-ui/FontIcon';
+import Button from 'material-ui/Button';
+import Icon from 'material-ui/Icon';
 
 
 const style = {
@@ -9,11 +9,11 @@ const style = {
 };
 
 const WelcomeButton = () => (
-    <RaisedButton
+    <Button
       label="Enter"
       labelPosition="before"
-      icon={<FontIcon className="material-icons">keyboard_arrow_right
-      </FontIcon>}
+      icon={<Icon className="material-icons">keyboard_arrow_right
+      </Icon>}
       primary={true}
       style={style}
     />

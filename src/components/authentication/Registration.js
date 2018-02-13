@@ -1,7 +1,7 @@
 import React from 'react';
 import TextField from 'material-ui/TextField';
-import FontIcon from 'material-ui/FontIcon';
-import { blueA200 } from 'material-ui/styles/colors';
+import Icon from 'material-ui/Icon';
+import { blueA200 } from 'material-ui/colors/blue';
 import WelcomeButton from '../buttons/WelcomeButton'
 
 class Registration extends React.Component {
@@ -42,11 +42,11 @@ class Registration extends React.Component {
         <h2 className={'welcome'}>Welcome!</h2>
         <form className='reg-form' onSubmit={this.handleSubmit}>
           <div>
-            <FontIcon
+            <Icon
               style={iconStyles}
               className="material-icons"
               color={blueA200}>person_outline
-            </FontIcon>
+            </Icon>
             <TextField
               hintText="Username"
               type="text"
@@ -57,11 +57,11 @@ class Registration extends React.Component {
           </div>
 
           <div>
-            <FontIcon
+            <Icon
               style={iconStyles}
               className="material-icons"
               color={blueA200}>lock_outline
-            </FontIcon>
+            </Icon>
             <TextField
               hintText="Password"
               type="password"
