@@ -11,7 +11,6 @@ const PrivateRouter = ({component: Component, ...rest}) => {
 
       if ((username !== null) && (password !== null)) {
         return (
-
           <div className='Private'>
             <TopBar/>
             <LeftBar/>
@@ -22,8 +21,6 @@ const PrivateRouter = ({component: Component, ...rest}) => {
         alert("Please log in");
         return <Redirect to="/authentication"/>
       }
-
-
 
     }}/>
   )

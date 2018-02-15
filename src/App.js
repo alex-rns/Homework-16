@@ -4,8 +4,6 @@ import {Switch, Route, Redirect} from 'react-router-dom';
 import './App.css'
 
 //components
-import LeftBar from './components/leftBar/LeftBar';
-import TopBar from './components/topBar/TopBar';
 import Workflow from "./components/workflow/Workflow";
 import Calendar from "./components/calendar/Calendar";
 import Statistics from "./components/statistics/Statistics";
@@ -35,6 +33,7 @@ class App extends React.Component {
           <PrivateRouter exact path="/settings" component={Settings}/>
 
           <Route component={PageNotFound}/>
+
         </Switch>
 
       </div>

@@ -8,7 +8,6 @@ class Home extends React.Component {
         <h1>Home</h1>
         <Button label="Test button" />
       </div>
-
     )
   }
 }

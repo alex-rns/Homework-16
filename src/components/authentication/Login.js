@@ -1,13 +1,11 @@
 import React from 'react';
 import TextField from 'material-ui/TextField';
 import Icon from 'material-ui/Icon';
-// import { blueA200 } from 'material-ui/colors/blue';
 import WelcomeButton from '../buttons/WelcomeButton'
 import { withRouter } from 'react-router-dom';
 
 
 class Login extends React.Component {
-
 
   constructor(props) {
     super(props);
