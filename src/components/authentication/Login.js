@@ -1,8 +1,9 @@
 import React from 'react';
 import TextField from 'material-ui/TextField';
 import Icon from 'material-ui/Icon';
-import { blueA200 } from 'material-ui/colors/blue';
+// import { blueA200 } from 'material-ui/colors/blue';
 import WelcomeButton from '../buttons/WelcomeButton'
+import { withRouter } from 'react-router-dom';
 
 
 class Login extends React.Component {
@@ -28,8 +29,10 @@ class Login extends React.Component {
 
     if((username === this.state.username)&&(password === this.state.password)){
       console.log('user should login');
+      this.props.history.push('/')
     } else {
       console.log('wrong name or password');
+      alert("wrong name or password");
     }
   };
 
@@ -89,4 +92,4 @@ class Login extends React.Component {
   }
 }
 
-export default Login;
+export default withRouter(Login);

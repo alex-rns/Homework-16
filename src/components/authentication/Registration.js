@@ -1,7 +1,7 @@
 import React from 'react';
 import TextField from 'material-ui/TextField';
 import Icon from 'material-ui/Icon';
-import { blueA200 } from 'material-ui/colors/blue';
+// import { blueA200 } from 'material-ui/colors/blue';
 import WelcomeButton from '../buttons/WelcomeButton'
 
 class Registration extends React.Component {
@@ -67,10 +67,6 @@ class Registration extends React.Component {
 
             />
           </div>
-
-
-
-
 
           <WelcomeButton/>
         </form>

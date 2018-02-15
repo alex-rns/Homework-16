@@ -2,6 +2,8 @@ import React from 'react';
 import Reboot from 'material-ui/Reboot';
 import {Switch, Route, Redirect} from 'react-router-dom';
 import './App.css'
+
+//components
 import LeftBar from './components/leftBar/LeftBar';
 import TopBar from './components/topBar/TopBar';
 import Workflow from "./components/workflow/Workflow";
@@ -11,41 +13,19 @@ import Settings from "./components/settings/Settings";
 import Home from "./components/home/Home";
 import Users from "./components/users/Users";
 import Authentication from "./components/authentication/Authentication";
-
+import PageNotFound from "./components/PageNotFound/PageNotFound"
+import PrivateRouter from "./PrivateRouter"
 
 class App extends React.Component {
   render() {
-
-    const PrivateRouter = ({component: Component, ...rest}) => {
-      return (
-        <Route {...rest} render={matchProps => {
-          let username = JSON.parse(localStorage.getItem("username"));
-          let password = JSON.parse(localStorage.getItem("password"));
-
-          if ((username !== null) && (password !== null)) {
-            return (
-
-              <div className='Private'>
-                <TopBar/>
-                <LeftBar/>
-                <Component {...matchProps}/>
-              </div>
-            )
-          } else {
-            alert("Please log in");
-            return <Redirect to="/authentication"/>
-          }
-        }}/>
-      )
-    };
-
-
     return (
       <div className='App'>
+
         <Reboot />
+
         <Switch>
 
-          <Route path="/authentication" component={Authentication}/>
+          <Route exact path="/authentication" component={Authentication}/>
 
           <PrivateRouter exact path="/" component={Home}/>
           <PrivateRouter exact path="/workflow" component={Workflow}/>
@@ -53,6 +33,8 @@ class App extends React.Component {
           <PrivateRouter exact path="/calendar" component={Calendar}/>
           <PrivateRouter exact path="/users" component={Users}/>
           <PrivateRouter exact path="/settings" component={Settings}/>
+
+          <Route component={PageNotFound}/>
         </Switch>
 
       </div>

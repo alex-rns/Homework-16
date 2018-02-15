@@ -1,11 +1,20 @@
 import React from 'react';
 import './TopBar.css'
-import { Navbar, Header, Button, Glyphicon, Nav, NavItem, NavDropdown, MenuItem, Image } from 'react-bootstrap/lib'
+import { Navbar, Button, Glyphicon, Nav, NavItem, NavDropdown, MenuItem, Image } from 'react-bootstrap/lib'
 import userPhoto from '../../assets/img/user-photo.png'
 
 
 
 class TopBar extends React.Component {
+
+  handleLogOut = (e) => {
+    e.preventDefault();
+
+    localStorage.clear();
+    window.location.reload();
+  };
+
+
   render() {
     return(
       <Navbar>
@@ -31,7 +40,7 @@ class TopBar extends React.Component {
             <MenuItem eventKey={3.2}>Another action</MenuItem>
             <MenuItem eventKey={3.3}>Something else here</MenuItem>
             <MenuItem divider />
-            <MenuItem eventKey={3.4}>Log out</MenuItem>
+            <MenuItem onClick={this.handleLogOut} eventKey={3.4}>Log out</MenuItem>
           </NavDropdown>
         </Nav>
       </Navbar>

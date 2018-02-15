@@ -19,7 +19,7 @@ function WelcomeButton(props) {
   const { classes } = props;
   return (
     <div>
-      <Button className={classes.button} variant="raised" color="primary">
+      <Button type="submit" className={classes.button} variant="raised" color="primary">
         Enter
         <Icon className={classes.rightIcon}>keyboard_arrow_right
         </Icon>
