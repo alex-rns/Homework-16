@@ -12,8 +12,8 @@ class TopBar extends React.Component {
     e.preventDefault();
     localStorage.removeItem("logged");
     // localStorage.clear();
+    this.props.history.push('/authentication');
     // window.location.reload();
-    this.props.history.push('/authentication')
   };
 
   render() {

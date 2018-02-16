@@ -14,8 +14,6 @@ import Tabs, {Tab} from 'material-ui/Tabs';
 import Typography from 'material-ui/Typography';
 
 
-
-
 function TabContainer({children, dir}) {
   return (
     <Typography component="div" dir={dir} style={{padding: 8 * 3}}>
@@ -25,18 +23,19 @@ function TabContainer({children, dir}) {
 }
 
 TabContainer.propTypes = {
+  children: PropTypes.node.isRequired,
   dir: PropTypes.string.isRequired,
 };
 
 const styles = theme => ({
   root: {
-    backgroundColor: theme.palette.background.paper
-  },
+    backgroundColor: theme.palette.background.default
+  }
 });
 
 class Authentication extends React.Component {
   state = {
-    value: 0,
+    value: 1,
   };
 
   handleChange = (event, value) => {
@@ -48,25 +47,31 @@ class Authentication extends React.Component {
   };
 
   render() {
-    const {classes, theme} = this.props;
+    const { classes, theme} = this.props;
 
     return (
 
-      <div className={classes.root}>
+      <div className="Authentication">
         <div className="auth-wrapp">
           <div className='auth-box'>
             <img src={logo} alt="Logo"/>
             <div>
               <Tabs
+                style={this.styles}
                 className="auth"
                 value={this.state.value}
                 onChange={this.handleChange}
                 indicatorColor="primary"
-                textColor="primary"
                 fullWidth
               >
-                <Tab className='register' label="Register"/>
-                <Tab className='login' label="Login"/>
+                <Tab
+                  className='register'
+                  label="Register"
+                />
+                <Tab
+                  className='login'
+                  label="Login"
+                />
               </Tabs>
             </div>
           </div>
