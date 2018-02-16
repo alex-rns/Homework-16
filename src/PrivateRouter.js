@@ -1,5 +1,7 @@
 import React from 'react';
 import { Route, Redirect} from 'react-router-dom';
+
+//components
 import TopBar from './components/topBar/TopBar';
 import LeftBar from './components/leftBar/LeftBar';
 
@@ -8,8 +10,10 @@ const PrivateRouter = ({component: Component, ...rest}) => {
     <Route {...rest} render={matchProps => {
       let username = JSON.parse(localStorage.getItem("username"));
       let password = JSON.parse(localStorage.getItem("password"));
+      let loggedData = JSON.parse(localStorage.getItem("logged"));
 
-      if ((username !== null) && (password !== null)) {
+      if ((username !== null) && (password !== null) && (loggedData !== null)) {
+
         return (
           <div className='Private'>
             <TopBar/>

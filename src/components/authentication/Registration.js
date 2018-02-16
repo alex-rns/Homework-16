@@ -1,8 +1,16 @@
 import React from 'react';
+
+
+//components
+import WelcomeButton from '../buttons/WelcomeButton';
+
+//MUI
 import TextField from 'material-ui/TextField';
 import Icon from 'material-ui/Icon';
 // import { blueA200 } from 'material-ui/colors/blue';
-import WelcomeButton from '../buttons/WelcomeButton'
+
+
+
 
 class Registration extends React.Component {
 
@@ -19,6 +27,7 @@ class Registration extends React.Component {
     console.log('your username - ', this.state.username, 'your pass - ', this.state.password);
     localStorage.setItem("username", JSON.stringify(this.state.username));
     localStorage.setItem("password", JSON.stringify(this.state.password));
+    alert('Registration successful! Please log in!')
   };
 
   handleChange = (e) => {

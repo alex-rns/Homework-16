@@ -1,9 +1,12 @@
 import React from 'react';
-import TextField from 'material-ui/TextField';
-import Icon from 'material-ui/Icon';
-import WelcomeButton from '../buttons/WelcomeButton'
 import { withRouter } from 'react-router-dom';
 
+//components
+import WelcomeButton from '../buttons/WelcomeButton';
+
+//MUI
+import TextField from 'material-ui/TextField';
+import Icon from 'material-ui/Icon';
 
 class Login extends React.Component {
 
@@ -21,13 +24,17 @@ class Login extends React.Component {
 
     let username = JSON.parse(localStorage.getItem("username"));
     let password = JSON.parse(localStorage.getItem("password"));
+    localStorage.setItem("logged", JSON.stringify("logged"));
+
+    const { history } = this.props;
 
     console.log(username, this.state.username);
     console.log(password, this.state.password);
 
     if((username === this.state.username)&&(password === this.state.password)){
       console.log('user should login');
-      this.props.history.push('/')
+
+      history.push('/')
     } else {
       console.log('wrong name or password');
       alert("wrong name or password");

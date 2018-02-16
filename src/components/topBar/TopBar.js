@@ -1,14 +1,19 @@
 import React from 'react';
-import './TopBar.css'
-import { Navbar, Button, Glyphicon, Nav, NavItem, NavDropdown, MenuItem, Image } from 'react-bootstrap/lib'
+import { withRouter } from 'react-router-dom';
+import './TopBar.css';
+
+//components
+import { Navbar, Button, Glyphicon, Nav, NavItem, NavDropdown, MenuItem, Image } from 'react-bootstrap/lib';
 import userPhoto from '../../assets/img/user-photo.png'
 
 class TopBar extends React.Component {
 
   handleLogOut = (e) => {
     e.preventDefault();
-    localStorage.clear();
-    window.location.reload();
+    localStorage.removeItem("logged");
+    // localStorage.clear();
+    // window.location.reload();
+    this.props.history.push('/authentication')
   };
 
   render() {
@@ -44,4 +49,4 @@ class TopBar extends React.Component {
   }
 }
 
-export default TopBar;
+export default withRouter(TopBar);

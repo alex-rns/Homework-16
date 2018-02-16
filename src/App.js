@@ -11,8 +11,8 @@ import Settings from "./components/settings/Settings";
 import Home from "./components/home/Home";
 import Users from "./components/users/Users";
 import Authentication from "./components/authentication/Authentication";
-import PageNotFound from "./components/PageNotFound/PageNotFound"
-import PrivateRouter from "./PrivateRouter"
+import PageNotFound from "./components/PageNotFound/PageNotFound";
+import PrivateRouter from "./PrivateRouter";
 
 class App extends React.Component {
   render() {

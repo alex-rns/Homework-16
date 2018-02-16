@@ -2,12 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {withStyles} from 'material-ui/styles';
 import SwipeableViews from 'react-swipeable-views';
+import './Authentication.css';
+
+//components
+import Registration from "./Registration";
+import Login from './Login';
+import logo from '../../assets/img/logo.png';
+
+//MUI
 import Tabs, {Tab} from 'material-ui/Tabs';
 import Typography from 'material-ui/Typography';
-import Login from './Login'
-import './Authentication.css'
-import logo from '../../assets/img/logo.png'
-import Registration from "./Registration";
+
+
 
 
 function TabContainer({children, dir}) {
