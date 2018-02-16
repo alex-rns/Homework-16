@@ -8,10 +8,16 @@ import Icon from 'material-ui/Icon';
 
 const styles = theme => ({
   button: {
-    margin: theme.spacing.unit
+    fontSize: theme.typography.button.fontSize,
+    paddingTop: 23,
+    paddingBottom: 23,
+    paddingLeft: 135,
+    paddingRigth: 25,
+    borderRadius: 50,
+    margin: theme.spacing.unit*6
   },
   rightIcon: {
-    marginLeft: theme.spacing.unit,
+    marginLeft: theme.spacing.unit*15,
   },
 });
 
@@ -19,7 +25,13 @@ function WelcomeButton(props) {
   const { classes } = props;
   return (
     <div>
-      <Button type="submit" className={classes.button} variant="raised" color="primary">
+      <Button
+        size="large"
+        type="submit"
+        className={classes.button}
+        variant="raised"
+        color="primary"
+      >
         Enter
         <Icon className={classes.rightIcon}>keyboard_arrow_right
         </Icon>

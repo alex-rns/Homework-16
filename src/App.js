@@ -2,6 +2,7 @@ import React from 'react';
 import Reboot from 'material-ui/Reboot';
 import {Switch, Route} from 'react-router-dom';
 import './App.css'
+import {MuiThemeProvider, createMuiTheme} from 'material-ui/styles';
 
 //components
 import Workflow from "./components/workflow/Workflow";
@@ -14,35 +15,40 @@ import Authentication from "./components/authentication/Authentication";
 import PageNotFound from "./components/PageNotFound/PageNotFound";
 import PrivateRouter from "./PrivateRouter";
 
-//
-// const theme = createMuiTheme({
-//   palette: {
-//     primary: {
-//       light: '#757ce8',
-//       main: '#5584ff',
-//       dark: '#002884',
-//       contrastText: '#fff',
-//     },
-//     secondary: {
-//       light: '#ff7961',
-//       main: '#f83c7b',
-//       dark: '#ba000d',
-//       contrastText: '#000',
-//     }
-//   },
-//
-//   typography: {
-//     display3: {
-//       fontWeight: 500,
-//       fontSize: 70
-//     }
-//   }
-// });
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      light: '#757ce8',
+      main: '#5584ff',
+      dark: '#002884',
+      contrastText: '#fff',
+    },
+    secondary: {
+      light: '#ff7961',
+      main: '#f83c7b',
+      dark: '#ba000d',
+      contrastText: '#000',
+    }
+  },
+
+  typography: {
+    display3: {
+      fontWeight: 500,
+      fontSize: 70
+    },
+    button: {
+      fontSize: '2.0rem',
+      textTransform: 'capitalize',
+    }
+  }
+});
 
 
 class App extends React.Component {
   render() {
     return (
+      <MuiThemeProvider theme={theme}>
         <div className='App'>
 
           <Reboot/>
@@ -62,6 +68,7 @@ class App extends React.Component {
 
           </Switch>
         </div>
+      </MuiThemeProvider>
     );
   }
 }
