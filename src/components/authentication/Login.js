@@ -8,6 +8,17 @@ import WelcomeButton from '../buttons/WelcomeButton';
 import TextField from 'material-ui/TextField';
 import Icon from 'material-ui/Icon';
 
+
+
+
+const styles = theme => ({
+  textField: {
+    marginLeft: theme.spacing.unit,
+    marginRight: theme.spacing.unit,
+    width: 200,
+  }
+});
+
 class Login extends React.Component {
 
   constructor(props) {
@@ -50,6 +61,7 @@ class Login extends React.Component {
 
   render() {
 
+
     console.log(this.state);
 
     const iconStyles = {
@@ -60,7 +72,7 @@ class Login extends React.Component {
     return(
       <div className="Login">
         <h2 className={'welcome'}>Welcome <span>back!</span></h2>
-        <form className='login-form' onSubmit={this.handleSubmit}>
+        <form className='login-form' onSubmit={this.handleSubmit} >
 
           <div>
             <Icon style={iconStyles} color="primary">person_outline
