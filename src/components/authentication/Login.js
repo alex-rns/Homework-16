@@ -96,21 +96,21 @@ class Login extends React.Component {
             <Icon style={iconStyles} color="primary">person_outline
             </Icon>
             <TextField
-              className={classes.textField}
+              // className={classes.textField}
               label="Username"
               type="text"
               name='username'
               value={this.state.username}
               onChange={this.handleChange}
-              InputProps={{
-                classes: {
-                  root: classes.textFieldRoot,
-                  input: classes.textFieldInput
-                },
-              }}
-              InputLabelProps={{
-                className: classes.textFieldFormLabel,
-              }}
+              // InputProps={{
+              //   classes: {
+              //     root: classes.textFieldRoot,
+              //     input: classes.textFieldInput
+              //   },
+              // }}
+              // InputLabelProps={{
+              //   className: classes.textFieldFormLabel,
+              // }}
             />
           </div>
 
@@ -118,7 +118,7 @@ class Login extends React.Component {
             <Icon style={iconStyles} color="primary">lock_outline
             </Icon>
             <TextField
-              className={classes.textField}
+              // className={classes.textField}
               label="Password"
               variant="password"
               type="password"
@@ -126,15 +126,15 @@ class Login extends React.Component {
               autoComplete="current-password"
               value={this.state.password}
               onChange={this.handleChange}
-              InputProps={{
-                classes: {
-                  root: classes.textFieldRoot,
-                  input: classes.textFieldInput
-                },
-              }}
-              InputLabelProps={{
-                className: classes.textFieldFormLabel,
-              }}
+              // InputProps={{
+              //   classes: {
+              //     root: classes.textFieldRoot,
+              //     input: classes.textFieldInput
+              //   },
+              // }}
+              // InputLabelProps={{
+              //   className: classes.textFieldFormLabel,
+              // }}
             />
           </div>
 
@@ -146,4 +146,4 @@ class Login extends React.Component {
   }
 }
 
-export default withStyles(styles, withRouter)(Login);
+export default withRouter(Login);
