@@ -23,8 +23,7 @@ const PrivateRouter = ({component: Component, ...rest}) => {
         )
       } else {
         alert("Please log in");
-        return <Redirect to="/authentication"/>
-      }
+        return <Redirect to="/authentication"/>      }
 
     }}/>
   )
