@@ -45,7 +45,7 @@ class Authentication extends React.Component {
             </div>
           </div>
 
-          <div className="">
+          <div className="auth">
             {this.state.tab === 'logTab' ?
               <Login/>
               :
