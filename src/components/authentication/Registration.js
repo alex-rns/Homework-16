@@ -1,9 +1,11 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import FontAwesome from 'react-fontawesome';
 
 //components
 import WelcomeButton from '../buttons/WelcomeButton';
 
+const buttonText = 'Register';
 
 class Registration extends React.Component {
 
@@ -35,12 +37,21 @@ class Registration extends React.Component {
     console.log(this.state);
 
 
+
+
     return(
       <div className="Registration">
         <h2 className={'welcome'}>Welcome!</h2>
         <form className='reg-form' onSubmit={this.handleSubmit}>
-          <div>
+          <div className='welcome-input-wrap'>
+            <FontAwesome
+              className='welcome-icon'
+              name='user'
+              size='2x'
+            />
+
             <input
+              className='welcome-input'
               placeholder="Username"
               type="text"
               name='username'
@@ -49,8 +60,14 @@ class Registration extends React.Component {
             />
           </div>
 
-          <div>
+          <div className='welcome-input-wrap'>
+            <FontAwesome
+              className='welcome-icon'
+              name='unlock-alt'
+              size='2x'
+            />
             <input
+              className='welcome-input'
               placeholder="Password"
               type="password"
               name='password'
@@ -59,7 +76,7 @@ class Registration extends React.Component {
             />
           </div>
 
-          <WelcomeButton/>
+          <WelcomeButton data={ buttonText }/>
         </form>
 
       </div>

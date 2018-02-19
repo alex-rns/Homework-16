@@ -1,46 +1,24 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import FontAwesome from 'react-fontawesome';
+import './WelcomeButton.css'
 
-//MUI
-import { withStyles } from 'material-ui/styles';
-import Button from 'material-ui/Button';
-import Icon from 'material-ui/Icon';
+class WelcomeButton extends React.Component {
+  render() {
+    return (
+      <div>
+        <button
+          className='welcome-button'
+        >
+          {this.props.data}
 
-const styles = theme => ({
-  button: {
-    fontSize: theme.typography.button.fontSize,
-    paddingTop: 23,
-    paddingBottom: 23,
-    paddingLeft: 135,
-    paddingRigth: 25,
-    borderRadius: 50,
-    margin: theme.spacing.unit*6
-  },
-  rightIcon: {
-    marginLeft: theme.spacing.unit*15,
-  },
-});
-
-function WelcomeButton(props) {
-  const { classes } = props;
-  return (
-    <div>
-      <Button
-        size="large"
-        type="submit"
-        className={classes.button}
-        variant="raised"
-        color="primary"
-      >
-        Enter
-        <Icon className={classes.rightIcon}>keyboard_arrow_right
-        </Icon>
-      </Button>
-
-    </div>
-  );
+        </button>
+        <FontAwesome
+          className='welcome-button-icon'
+          name='angle-right'
+        />
+      </div>
+    )
+  }
 }
-WelcomeButton.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
-export default withStyles(styles)(WelcomeButton);
+
+export default WelcomeButton;
