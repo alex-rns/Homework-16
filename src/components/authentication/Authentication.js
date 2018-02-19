@@ -1,5 +1,6 @@
 import React from 'react';
 import './Authentication.css';
+import SwipeableViews from 'react-swipeable-views';
 import { Link } from 'react-router-dom'
 
 //components
