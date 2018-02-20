@@ -14,8 +14,7 @@ import PageNotFound from "./components/PageNotFound/PageNotFound";
 import PrivateRouter from "./PrivateRouter";
 
 
-class App extends React.Component {
-  render() {
+const App =() => {
     return (
         <div className='App'>
 
@@ -35,7 +34,6 @@ class App extends React.Component {
           </Switch>
         </div>
     );
-  }
-}
+};
 
 export default App;

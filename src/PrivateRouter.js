@@ -12,7 +12,7 @@ const PrivateRouter = ({component: Component, ...rest}) => {
       let password = JSON.parse(localStorage.getItem("password"));
       let loggedData = JSON.parse(localStorage.getItem("logged"));
 
-      if ((username !== null) && (password !== null) && (loggedData !== null)) {
+      if ((username) && (password) && (loggedData)) {
 
         return (
           <div className='Private'>
