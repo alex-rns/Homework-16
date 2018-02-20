@@ -5,6 +5,7 @@ import {Route, Redirect} from 'react-router-dom';
 import TopBar from './components/topBar/TopBar';
 import LeftBar from './components/leftBar/LeftBar';
 
+
 const PrivateRouter = ({component: Component, ...rest}) => {
   return (
     <Route {...rest} render={matchProps => {
@@ -18,7 +19,7 @@ const PrivateRouter = ({component: Component, ...rest}) => {
           </div>
         )
       } else {
-        alert("Please log in");
+        alert("Wrong password or username ");
         return(
           <Redirect to="/authentication"/>
         )

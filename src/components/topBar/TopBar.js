@@ -5,13 +5,17 @@ import './TopBar.css';
 //components
 import { Navbar, Button, Glyphicon, Nav, NavItem, NavDropdown, MenuItem, Image } from 'react-bootstrap/lib';
 import userPhoto from '../../assets/img/user-photo.png'
+import Authentication from "../authentication/Authentication";
 
 class TopBar extends React.Component {
 
   handleLogOut = (e) => {
+
+    const { history } = this.props;
+
     e.preventDefault();
-    localStorage.clear();
-    window.location.reload();
+    localStorage.removeItem('userCheck');
+    history.push('/authentication')
   };
 
   render() {

@@ -24,12 +24,15 @@ class Login extends React.Component {
     e.preventDefault();
     console.log('username - ', this.state.username, 'pass - ', this.state.password);
 
+    const { history } = this.props;
+
     const data = {
       login:this.state.username.trim(),
       pass:this.state.password.trim()
     };
 
     console.log(JSON.stringify(data));
+
 
     fetch('/api/user', {
       headers: {
@@ -40,20 +43,18 @@ class Login extends React.Component {
     })
       .then(res => res.json())
       .then(res => {
-        localStorage.setItem('userCheck', res.userCheck)
+        localStorage.setItem('userCheck', res.userCheck);
+        history.push('/')
       });
 
-
-    const { history } = this.props;
-
-    if( localStorage.getItem('userCheck') === 'exist'){
-      console.log('user should login');
-
-      history.push('/')
-    } else {
-      console.log('wrong name or password');
-      alert("wrong name or password");
-    }
+    // if( localStorage.getItem('userCheck') === 'exist'){
+    //   console.log('user should login');
+    //
+    //   history.push('/')
+    // } else {
+    //   console.log('wrong name or password');
+    //   alert("wrong name or password");
+    // }
   };
 
   handleChange = (e) => {

@@ -10,11 +10,21 @@ import logo from '../../assets/img/logo.png';
 
 
 class Authentication extends React.Component {
+
   constructor(props) {
     super(props);
 
     this.state= {
       tab: 'logTab'
+    }
+  }
+
+  componentWillMount(){
+    const { history } = this.props;
+    if(localStorage.getItem('userCheck') ==='exist' ){
+      history.push('/')
+    } else {
+      history.push('/authentication')
     }
   }
 
