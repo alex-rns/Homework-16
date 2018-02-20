@@ -10,17 +10,19 @@ const PrivateRouter = ({component: Component, ...rest}) => {
   return (
     <Route {...rest} render={matchProps => {
 
-      if (localStorage.getItem('userCheck')=== 'exist') {
+      if (localStorage.getItem('userCheck') === 'exist') {
         return (
           <div className='Private'>
             <TopBar/>
             <LeftBar/>
-            <Component {...matchProps}/>
+            <div className='content'>
+              <Component {...matchProps}/>
+            </div>
           </div>
         )
       } else {
         alert("Wrong password or username ");
-        return(
+        return (
           <Redirect to="/authentication"/>
         )
       }

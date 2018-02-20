@@ -23,8 +23,6 @@ class Authentication extends React.Component {
     const { history } = this.props;
     if(localStorage.getItem('userCheck') ==='exist' ){
       history.push('/')
-    } else {
-      history.push('/authentication')
     }
   }
 
