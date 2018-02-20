@@ -18,20 +18,35 @@ class Login extends React.Component {
     }
   }
 
+
+
   handleSubmit = (e) => {
     e.preventDefault();
     console.log('username - ', this.state.username, 'pass - ', this.state.password);
 
-    let username = JSON.parse(localStorage.getItem("username"));
-    let password = JSON.parse(localStorage.getItem("password"));
-    localStorage.setItem("logged", JSON.stringify("logged"));
+    const data = {
+      login:this.state.username.trim(),
+      pass:this.state.password.trim()
+    };
+
+    console.log(JSON.stringify(data));
+
+    fetch('/api/user', {
+      headers: {
+        'Content-type': 'application/json'
+      },
+      method: 'post',
+      body: JSON.stringify(data)
+    })
+      .then(res => res.json())
+      .then(res => {
+        localStorage.setItem('userCheck', res.userCheck)
+      });
+
 
     const { history } = this.props;
 
-    console.log(username, this.state.username);
-    console.log(password, this.state.password);
-
-    if((username === this.state.username)&&(password === this.state.password)){
+    if( localStorage.getItem('userCheck') === 'exist'){
       console.log('user should login');
 
       history.push('/')

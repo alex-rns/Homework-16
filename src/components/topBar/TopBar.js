@@ -10,10 +10,8 @@ class TopBar extends React.Component {
 
   handleLogOut = (e) => {
     e.preventDefault();
-    localStorage.removeItem("logged");
-    // localStorage.clear();
-    this.props.history.push('/authentication');
-    // window.location.reload();
+    localStorage.clear();
+    window.location.reload();
   };
 
   render() {

@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
     "material-design-icons": "^3.0.1",
     "material-ui": "^1.0.0-beta.33",
     "material-ui-icons": "^1.0.0-beta.17",
@@ -28,5 +30,6 @@
   },
   "devDependencies": {
     "react-bootstrap": "^0.32.1"
-  }
+  },
+  "proxy": "http://localhost:4000"
 }
