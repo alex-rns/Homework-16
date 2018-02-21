@@ -9,6 +9,7 @@ import Select from '../../atoms/Select'
 
 //config
 import salesChart from '../../../config/pieChart.config'
+import reportChart from '../../../config/reportChart.config'
 
 class Home extends React.Component {
   render() {
@@ -22,7 +23,7 @@ class Home extends React.Component {
 
         <Grid fluid>
           <Row>
-            <Col lg={5} md={12}>
+            <Col md={5}>
               <Box>
                 <Row>
                 <Col xs={6}>
@@ -32,7 +33,7 @@ class Home extends React.Component {
                   <Select data={yourSalesSelect}/>
                 </Col>
                 </Row>
-                <ReactHighcharts className='text-left' config={salesChart}>
+                <ReactHighcharts config={salesChart}>
                 </ReactHighcharts>
               </Box>
             </Col>
@@ -40,9 +41,18 @@ class Home extends React.Component {
 
 
 
-            <Col lg={7} md={12}>
+            <Col md={7}>
               <Box>
-                <h2>Report</h2>
+                <Row>
+                  <Col xs={6}>
+                    <h2>Report</h2>
+                  </Col>
+                  <Col className='text-right' xs={6}>
+                    <Select data={yourSalesSelect}/>
+                  </Col>
+                </Row>
+                <ReactHighcharts config={reportChart}>
+                </ReactHighcharts>
               </Box>
             </Col>
           </Row>
