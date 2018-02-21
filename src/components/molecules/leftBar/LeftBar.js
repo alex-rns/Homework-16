@@ -8,12 +8,23 @@ import logo from '../../../assets/img/logo.png'
 
 class LeftBar extends React.Component {
   render() {
+
+  let visibility = 'hide';
+
+  if(this.props.menuVisibility) {
+    visibility = 'show'
+  }
+
     return(
-      <div ref='left' className="LeftBar">
+      <div
+        className={ 'LeftBar ' + visibility}
+      >
         <div className="logo">
           <img src={logo} alt="Logo"/>
           <h1>Merkury</h1>
         </div>
+
+
 
         <nav className="nav-bar">
           <ul>
