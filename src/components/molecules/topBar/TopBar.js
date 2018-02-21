@@ -4,10 +4,14 @@ import './TopBar.css';
 
 //components
 import { Navbar, Button, Glyphicon, Nav, NavItem, NavDropdown, MenuItem, Image } from 'react-bootstrap/lib';
-import userPhoto from '../../assets/img/user-photo.png'
-import Authentication from "../authentication/Authentication";
+import userPhoto from '../../../assets/img/user-photo.png'
+import Authentication from "../../pages/authentication/Authentication";
 
 class TopBar extends React.Component {
+
+  handleMenu = () => {
+    this.refs.left.show()
+  };
 
   handleLogOut = (e) => {
 
@@ -22,14 +26,7 @@ class TopBar extends React.Component {
     return(
       <Navbar>
 
-        <Navbar.Header>
-          <Button>
-            <Glyphicon glyph="align-justify" />
-          </Button>
-          <Button>
-            <Glyphicon glyph="search" />
-          </Button>
-        </Navbar.Header>
+        <button onClick={this.handleMenu}>Open menu</button>
 
         <Nav pullRight>
           <NavItem eventKey={1} href="#">

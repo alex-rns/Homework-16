@@ -2,8 +2,8 @@ import React from 'react';
 import {Route, Redirect} from 'react-router-dom';
 
 //components
-import TopBar from './components/topBar/TopBar';
-import LeftBar from './components/leftBar/LeftBar';
+import TopBar from './components/molecules/topBar/TopBar';
+import LeftBar from './components/molecules/leftBar/LeftBar';
 
 
 const PrivateRouter = ({component: Component, ...rest}) => {

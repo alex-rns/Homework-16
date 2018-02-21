@@ -4,12 +4,12 @@ import './LeftBar.css'
 
 
 //components
-import logo from '../../assets/img/logo.png'
+import logo from '../../../assets/img/logo.png'
 
 class LeftBar extends React.Component {
   render() {
     return(
-      <div className="LeftBar">
+      <div ref='left' className="LeftBar">
         <div className="logo">
           <img src={logo} alt="Logo"/>
           <h1>Merkury</h1>

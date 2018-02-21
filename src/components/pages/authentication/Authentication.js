@@ -4,9 +4,9 @@ import SwipeableViews from 'react-swipeable-views';
 import { Link } from 'react-router-dom'
 
 //components
-import Registration from "./Registration";
-import Login from './Login';
-import logo from '../../assets/img/logo.png';
+import Registration from "../../organisms/Registration";
+import Login from '../../organisms/Login';
+import logo from '../../../assets/img/logo.png';
 
 
 class Authentication extends React.Component {

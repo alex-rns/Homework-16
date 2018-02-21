@@ -1,13 +1,15 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import FontAwesome from 'react-fontawesome';
+import './Login&Registration.sass'
+
 
 //components
-import WelcomeButton from '../buttons/WelcomeButton';
+import WelcomeButton from '../atoms/buttons/WelcomeButton';
 
-const buttonText = 'Register';
+const buttonText = 'Enter';
 
-class Registration extends React.Component {
+class Login extends React.Component {
 
   constructor(props) {
     super(props);
@@ -17,12 +19,44 @@ class Registration extends React.Component {
     }
   }
 
+
+
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log('your username - ', this.state.username, 'your pass - ', this.state.password);
-    localStorage.setItem("username", JSON.stringify(this.state.username));
-    localStorage.setItem("password", JSON.stringify(this.state.password));
-    alert('Registration successful! Please log in!')
+    console.log('username - ', this.state.username, 'pass - ', this.state.password);
+
+    const { history } = this.props;
+
+    const data = {
+      login:this.state.username.trim(),
+      pass:this.state.password.trim()
+    };
+
+    console.log(JSON.stringify(data));
+
+
+    fetch('/api/user', {
+      headers: {
+        'Content-type': 'application/json'
+      },
+      method: 'post',
+      body: JSON.stringify(data)
+    })
+      .then(res => res.json())
+      .then(res => {
+        localStorage.setItem('userCheck', res.userCheck);
+        localStorage.setItem('userName', this.state.username);
+        history.push('/')
+      });
+
+    // if( localStorage.getItem('userCheck') === 'exist'){
+    //   console.log('user should login');
+    //
+    //   history.push('/')
+    // } else {
+    //   console.log('wrong name or password');
+    //   alert("wrong name or password");
+    // }
   };
 
   handleChange = (e) => {
@@ -33,16 +67,13 @@ class Registration extends React.Component {
   };
 
   render() {
-
     console.log(this.state);
 
-
-
-
     return(
-      <div className="Registration">
-        <h2 className={'welcome'}>Welcome!</h2>
-        <form className='reg-form' onSubmit={this.handleSubmit}>
+      <div className="Login">
+        <h2 className={'welcome'}>Welcome <span>back!</span></h2>
+        <form className='login-form' onSubmit={this.handleSubmit} >
+
           <div className='welcome-input-wrap'>
             <FontAwesome
               className='welcome-icon'
@@ -84,4 +115,4 @@ class Registration extends React.Component {
   }
 }
 
-export default withRouter(Registration);
+export default withRouter(Login);

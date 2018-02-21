@@ -3,14 +3,14 @@ import {Switch, Route} from 'react-router-dom';
 import './App.css'
 
 //components
-import Workflow from "./components/workflow/Workflow";
-import Calendar from "./components/calendar/Calendar";
-import Statistics from "./components/statistics/Statistics";
-import Settings from "./components/settings/Settings";
-import Home from "./components/home/Home";
-import Users from "./components/users/Users";
-import Authentication from "./components/authentication/Authentication";
-import PageNotFound from "./components/PageNotFound/PageNotFound";
+import Workflow from "./components/pages/workflow/Workflow";
+import Calendar from "./components/pages/calendar/Calendar";
+import Statistics from "./components/pages/statistics/Statistics";
+import Settings from "./components/pages/settings/Settings";
+import Home from "./components/pages/home/Home";
+import Users from "./components/pages/users/Users";
+import Authentication from "./components/pages/authentication/Authentication";
+import PageNotFound from "./components/pages/PageNotFound/PageNotFound";
 import PrivateRouter from "./PrivateRouter";
 
 
