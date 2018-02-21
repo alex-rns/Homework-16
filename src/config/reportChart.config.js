@@ -9,15 +9,17 @@ const ReportChart = {
   xAxis: {
     categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
       'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-    visible: false,
-
+    gridLineWidth: 1,
+    labels: {
+      enabled: false
+    },
   },
   yAxis: {
     description: null,
     title: '',
   },
   series: [{
-    data: [100, 200, 100, 600, 200, 300, 100, 600, 300, 500, 600, 700]
+    data: [300, 250, 100, 600, 200, 300, 100, 600, 300, 500, 600, 700]
   }],
   credits: {
     enabled: false
