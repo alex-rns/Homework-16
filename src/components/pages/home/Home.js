@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactHighcharts from 'react-highcharts';
 import {Grid, Row, Col, Clearfix} from 'react-bootstrap/lib';
+import './Home.css'
 
 //component
 import Box from '../../atoms/Box'
@@ -17,21 +18,21 @@ class Home extends React.Component {
 
     return (
       <div className="Home">
-        <h2>Hello {userName}</h2>
+        <h2>Hello {userName}!</h2>
 
         <Grid fluid>
           <Row>
             <Col lg={5} md={12}>
               <Box>
                 <Row>
-                <Col md={6}>
+                <Col xs={6}>
                   <h2>Your Sales</h2>
                 </Col>
-                <Col md={6}>
+                <Col className='text-right' xs={6}>
                   <Select data={yourSalesSelect}/>
                 </Col>
                 </Row>
-                <ReactHighcharts config={salesChart}>
+                <ReactHighcharts className='text-left' config={salesChart}>
                 </ReactHighcharts>
               </Box>
             </Col>
@@ -41,7 +42,7 @@ class Home extends React.Component {
 
             <Col lg={7} md={12}>
               <Box>
-                <h2>Your Sales2</h2>
+                <h2>Report</h2>
               </Box>
             </Col>
           </Row>
