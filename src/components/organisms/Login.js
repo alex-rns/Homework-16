@@ -48,15 +48,6 @@ class Login extends React.Component {
         localStorage.setItem('userName', this.state.username);
         history.push('/')
       });
-
-    // if( localStorage.getItem('userCheck') === 'exist'){
-    //   console.log('user should login');
-    //
-    //   history.push('/')
-    // } else {
-    //   console.log('wrong name or password');
-    //   alert("wrong name or password");
-    // }
   };
 
   handleChange = (e) => {

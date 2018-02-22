@@ -17,6 +17,8 @@ class Home extends React.Component {
 
     const userName = JSON.parse(localStorage.getItem("userName"));
 
+
+
     return (
       <div className="Home">
         <h2>Hello {userName}!</h2>
@@ -33,7 +35,7 @@ class Home extends React.Component {
                   <Select data={yourSalesSelect}/>
                 </Col>
                 </Row>
-                <ReactHighcharts config={salesChart}>
+                <ReactHighcharts config={salesChart} ref="chart">
                 </ReactHighcharts>
               </Box>
             </Col>

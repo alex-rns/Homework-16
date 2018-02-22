@@ -10,7 +10,7 @@ const userExist = {
 
 App.use(bodyParser.json());
 
-App.post('/api/user', (req, res)=>{
+App.post('/api/user', (req, res) => {
   const name = req.body.login;
   const pass = req.body.pass;
 
@@ -26,6 +26,26 @@ App.post('/api/user', (req, res)=>{
 
 });
 
-App.listen(4000, ()=>{
+
+App.get('/api/user/sales/year', (req, res) => {
+  return res.json({
+    its: 'year'
+  })
+
+});
+App.get('/api/user/sales/month', (req, res) => {
+  return res.json({
+    its: 'month'
+  })
+
+});
+App.get('/api/user/sales/week', (req, res) => {
+  return res.json({
+    its: 'week'
+  })
+
+});
+
+App.listen(4000, () => {
   console.log('server is started')
 });
