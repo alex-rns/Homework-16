@@ -2,6 +2,15 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const App = express();
 
+//data
+
+const report = {
+  year: [300, 250, 100, 600, 200, 300, 100, 600, 300, 500, 600, 700],
+  month: [400, 600, 200, 300, 100, 600, 700],
+  week: [600, 200, 500, 600, 700]
+};
+
+
 
 //Login
 
@@ -49,18 +58,17 @@ App.get('/api/user/sales/week', (req, res) => {
 
 
 //Report Chart
+
 App.get('/api/user/report/year', (req, res) => {
-  return res.json(
-    [300, 250, 100, 600, 200, 300, 100, 600, 300, 500, 600, 700]
-  )
+  return res.json(report.year)
 });
 
 App.get('/api/user/report/month', (req, res) => {
-  return res.json([600, 300, 500, 600, 700])
+  return res.json(report.month)
 });
 
 App.get('/api/user/report/week', (req, res) => {
-  return res.json([100, 600, 200, 300, 100, 600,300, 250, 100, 600, 200, 700])
+  return res.json(report.week)
 });
 
 

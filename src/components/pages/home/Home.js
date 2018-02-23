@@ -1,5 +1,5 @@
 import React from 'react';
-import {Grid, Row, Col, Clearfix} from 'react-bootstrap/lib';
+import {Grid, Row, Col} from 'react-bootstrap/lib';
 import './Home.css'
 
 //component
