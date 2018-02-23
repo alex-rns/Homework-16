@@ -23,9 +23,6 @@ const SalesChart = {
     itemMarginBottom: 5
   },
   series: [{
-    data: [
-      ["Websites",6],["Logo", 4],["Social Media",7],["Adwords", 2], ["E-Commerce", 5]
-    ],
     innerSize: '60%',
     showInLegend:true,
     dataLabels: {

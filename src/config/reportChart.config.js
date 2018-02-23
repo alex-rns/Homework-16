@@ -19,7 +19,7 @@ const ReportChart = {
     title: '',
   },
   series: [{
-    data: [300, 250, 100, 600, 200, 300, 100, 600, 300, 500, 600, 700]
+    data: []
   }],
   credits: {
     enabled: false

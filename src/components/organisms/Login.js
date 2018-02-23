@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import FontAwesome from 'react-fontawesome';
-import './Login&Registration.sass'
+import './Login&Registration.css'
 
 
 //components
