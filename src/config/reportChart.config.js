@@ -1,7 +1,7 @@
 const ReportChart = {
     chart: {
         type: 'spline',
-        height: '290'
+        height: '300'
     },
     title: {
         text: null

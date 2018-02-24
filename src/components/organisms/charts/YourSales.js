@@ -15,7 +15,8 @@ class YourSales extends React.Component {
     super(props);
 
     this.state= {
-      dataSales : []
+      dataSales : [],
+      sumCountSales: null
     }
   }
 
@@ -29,11 +30,25 @@ class YourSales extends React.Component {
       .then(res => res.json())
       .then(res => {
         console.log(res);
+        // console.log(this.state.sumCountSales);
+
         this.setState({
-          dataSales: res
+          dataSales: res,
+          let q = []
         });
         let chart = this.refs.salesChart.getChart();
+
         chart.series[0].setData(this.state.dataSales, true);
+        // chart.setTitle({
+        //   text: this.state.sumCountSales
+        // });
+
+        let countSales = [];
+        let sumCountSales = 0;
+        for(let i=0;i<countSales.length;i++){
+          sumCountSales += parseInt(countSales[i])
+        }
+        console.log(sumCountSales);
 
       })
   }
@@ -54,6 +69,7 @@ class YourSales extends React.Component {
           });
           let chart = this.refs.salesChart.getChart();
           chart.series[0].setData(this.state.dataSales, true);
+
 
         })
     } else if (e.target.value === "Last Month") {
@@ -93,9 +109,11 @@ class YourSales extends React.Component {
     }
   };
 
+
   render() {
 
     const yourSalesSelect = ["Last Year", "Last Month", "Last Week"];
+
 
     return (
       <Col md={5}>
