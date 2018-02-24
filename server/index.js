@@ -10,6 +10,18 @@ const report = {
   week: [600, 200, 500, 600, 700]
 };
 
+const yourSales = {
+  year: [
+    ["Social Media",19],["Adwords", 19],["E-Commerce",48],["Websites",34],["Logo", 36]
+  ],
+  month: [
+    ["Social Media",6],["Adwords", 10],["E-Commerce",19],["Websites",6],["Logo", 12]
+  ],
+  week: [
+    ["Social Media",0],["Adwords", 1],["E-Commerce",12],["Websites",2],["Logo", 5]
+  ]
+};
+
 
 
 //Login
@@ -39,21 +51,15 @@ App.post('/api/user', (req, res) => {
 //Sales Chart
 
 App.get('/api/user/sales/year', (req, res) => {
-  return res.json([
-    ["Websites",6],["Logo", 4],["Websites",6],["Logo", 4],["Social Media",7]
-  ])
+  return res.json(yourSales.year)
 });
 
 App.get('/api/user/sales/month', (req, res) => {
-  return res.json([
-    ["Websites",6],["Logo", 4],["Social Media",7]
-  ])
+  return res.json(yourSales.month)
 });
 
 App.get('/api/user/sales/week', (req, res) => {
-  return res.json([
-    ["Websites",6],["Logo", 4],["Social Media",7],["Adwords", 2], ["E-Commerce", 5],["Websites",6],["Logo", 4],["Social Media",7],["Adwords", 2], ["E-Commerce", 5]
-  ])
+  return res.json(yourSales.week)
 });
 
 

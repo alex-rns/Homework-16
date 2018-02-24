@@ -1,12 +1,12 @@
 const SalesChart = {
   chart: {
     type: 'pie',
-    height: '250'
+    height: '290'
   },
   plotOptions: {
     pie: {
       shadow: false,
-      colors: ['#25396e', '#3755a4', '#4164c2', '#4164c2', '#4b74e0', '#5584ff']
+      colors: ['#4b74e0', '#4164c2', '#3755a4', '#25396e', '#5584ff']
     }
   },
   title: {
