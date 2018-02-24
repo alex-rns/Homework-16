@@ -44,7 +44,6 @@ class YourSales extends React.Component {
         // });
 
         let countSales = [];
-        let sumCountSales = 0;
         for (let i = 0; i < countSales.length; i++) {
           sumCountSales += parseInt(countSales[i])
         }
