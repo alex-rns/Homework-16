@@ -11,16 +11,16 @@ import SalesChart from '../../../config/pieChart.config'
 
 class YourSales extends React.Component {
 
-  constructor(props){
+  constructor(props) {
     super(props);
 
-    this.state= {
-      dataSales : [],
+    this.state = {
+      dataSales: [],
       sumCountSales: null
     }
   }
 
-  componentWillMount(){
+  componentWillMount() {
     fetch('/api/user/sales/year', {
       headers: {
         'Content-type': 'application/json'
@@ -29,12 +29,12 @@ class YourSales extends React.Component {
     })
       .then(res => res.json())
       .then(res => {
-        console.log(res);
-        // console.log(this.state.sumCountSales);
+        res && res.map((item) => {
+          console.log('second item -', item[1]);
+        });
 
         this.setState({
-          dataSales: res,
-          let q = []
+          dataSales: res
         });
         let chart = this.refs.salesChart.getChart();
 
@@ -45,7 +45,7 @@ class YourSales extends React.Component {
 
         let countSales = [];
         let sumCountSales = 0;
-        for(let i=0;i<countSales.length;i++){
+        for (let i = 0; i < countSales.length; i++) {
           sumCountSales += parseInt(countSales[i])
         }
         console.log(sumCountSales);
