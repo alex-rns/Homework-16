@@ -30,15 +30,14 @@ class YourSales extends React.Component {
       .then(res => res.json())
       .then(res => {
         res && res.map((item)=>{
-          let a= 0;
+          let sum= 0;
           for( let i=0; i<res.length;i++){
-            a+=item[1]
+            sum+=item[1]
           }
-
 
           console.log('second item -', item[1]);
           this.setState({
-            sumCountSales: a
+            sumCountSales: sum
           });
 
 
@@ -86,16 +85,20 @@ class YourSales extends React.Component {
         .then(res => res.json())
         .then(res => {
           res && res.map((item)=>{
-            let a= 0;
+
+
+            let sum= 0;
             for( let i=0; i<res.length;i++){
-              a+=item[1]
+              sum+=item[1]
             }
 
             console.log('second item -', item[1]);
             this.setState({
-              sumCountSales: a
+              sumCountSales: sum
             });
           });
+
+
           console.log(res);
           this.setState({
             dataSales: res
@@ -119,14 +122,14 @@ class YourSales extends React.Component {
         .then(res => {
 
           res && res.map((item)=>{
-            let a= 0;
+            let sum= 0;
             for( let i=0; i<res.length;i++){
-              a+=item[1]
+              sum+=item[1]
             }
 
             console.log('second item -', item[1]);
             this.setState({
-              sumCountSales: a
+              sumCountSales: sum
             });
           });
 
@@ -152,14 +155,14 @@ class YourSales extends React.Component {
         .then(res => {
 
           res && res.map((item)=>{
-            let a= 0;
+            let sum= 0;
             for( let i=0; i<res.length;i++){
-              a+=item[1]
+              sum+=item[1]
             }
 
             console.log('second item -', item[1]);
             this.setState({
-              sumCountSales: a
+              sumCountSales: sum
             });
           });
 
