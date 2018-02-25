@@ -6,6 +6,7 @@ import './Login&Registration.css'
 //components
 import WelcomeButton from '../atoms/buttons/WelcomeButton';
 
+
 const buttonText = 'Register';
 
 class Registration extends React.Component {
@@ -36,9 +37,6 @@ class Registration extends React.Component {
   render() {
 
     console.log(this.state);
-
-
-
 
     return(
       <div className="Registration">

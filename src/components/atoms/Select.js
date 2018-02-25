@@ -4,11 +4,6 @@ import FontAwesome from 'react-fontawesome';
 
 class Select extends React.Component {
 
-
-
-
-
-
   render() {
     return (
       <div className='select-wrapp'>

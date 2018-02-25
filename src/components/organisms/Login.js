@@ -3,9 +3,9 @@ import { withRouter } from 'react-router-dom';
 import FontAwesome from 'react-fontawesome';
 import './Login&Registration.css'
 
-
 //components
 import WelcomeButton from '../atoms/buttons/WelcomeButton';
+
 
 const buttonText = 'Enter';
 
@@ -19,8 +19,6 @@ class Login extends React.Component {
     }
   }
 
-
-
   handleSubmit = (e) => {
     e.preventDefault();
     console.log('username - ', this.state.username, 'pass - ', this.state.password);
@@ -33,7 +31,6 @@ class Login extends React.Component {
     };
 
     console.log(JSON.stringify(data));
-
 
     fetch('/api/user', {
       headers: {

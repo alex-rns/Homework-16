@@ -3,7 +3,6 @@ import TopBar from '../molecules/topBar/TopBar';
 import LeftBar from '../molecules/leftBar/LeftBar';
 import onClickOutside from 'react-onclickoutside'
 
-
 class Bar extends React.Component {
   constructor(props){
     super(props);
@@ -19,7 +18,6 @@ class Bar extends React.Component {
     })
   };
 
-
   handleMouseDown = (e) => {
     this.toggleMenu()
   };
@@ -29,7 +27,6 @@ class Bar extends React.Component {
       visible: !this.state.visible
     })
   };
-
 
   render() {
     return (

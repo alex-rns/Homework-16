@@ -6,7 +6,6 @@ import Bar from './components/organisms/Bar'
 
 const PrivateRouter = ({component: Component, ...rest}) => {
 
-
   return (
     <Route {...rest} render={matchProps => {
 
@@ -25,7 +24,6 @@ const PrivateRouter = ({component: Component, ...rest}) => {
           <Redirect to="/authentication"/>
         )
       }
-
     }}/>
   )
 };

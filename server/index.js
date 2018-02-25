@@ -22,8 +22,6 @@ const yourSales = {
   ]
 };
 
-
-
 //Login
 
 const userExist = {

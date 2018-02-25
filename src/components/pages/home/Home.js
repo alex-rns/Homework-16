@@ -1,5 +1,5 @@
 import React from 'react';
-import {Grid, Row, Col} from 'react-bootstrap/lib';
+import {Grid, Row} from 'react-bootstrap/lib';
 import './Home.css'
 
 //component
@@ -7,7 +7,6 @@ import YourSales from "../../organisms/charts/YourSales";
 import Report from "../../organisms/charts/Report";
 
 class Home extends React.Component {
-
 
   render() {
 

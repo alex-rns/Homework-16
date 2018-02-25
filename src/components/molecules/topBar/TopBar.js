@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 import './TopBar.css';
 
 //components
-import { Navbar, Button, Glyphicon, Nav, NavItem, NavDropdown, MenuItem, Image } from 'react-bootstrap/lib';
+import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Image } from 'react-bootstrap/lib';
 import userPhoto from '../../../assets/img/user-photo.png'
 
 class TopBar extends React.Component {

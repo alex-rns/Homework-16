@@ -2,7 +2,6 @@ import React from 'react';
 import {NavLink } from 'react-router-dom'
 import './LeftBar.css'
 
-
 //components
 import logo from '../../../assets/img/logo.png'
 
@@ -23,8 +22,6 @@ class LeftBar extends React.Component {
           <img src={logo} alt="Logo"/>
           <h1>Merkury</h1>
         </div>
-
-
 
         <nav className="nav-bar">
           <ul>

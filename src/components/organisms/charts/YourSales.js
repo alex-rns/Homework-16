@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactHighcharts from 'react-highcharts';
-import {Grid, Row, Col, Clearfix} from 'react-bootstrap/lib';
+import {Row, Col} from 'react-bootstrap/lib';
 
 //component
 import Box from '../../atoms/Box'
@@ -41,6 +41,7 @@ class YourSales extends React.Component {
           this.setState({
             sumCountSales: sum
           });
+          return arr;
         });
 
         console.log('sum -', this.state.sumCountSales);
@@ -79,6 +80,7 @@ class YourSales extends React.Component {
             this.setState({
               sumCountSales: sum
             });
+            return arr;
           });
 
           console.log('sum -', this.state.sumCountSales);
@@ -115,6 +117,7 @@ class YourSales extends React.Component {
             this.setState({
               sumCountSales: sum
             });
+            return arr;
           });
 
           console.log('sum -', this.state.sumCountSales);
@@ -151,6 +154,7 @@ class YourSales extends React.Component {
             this.setState({
               sumCountSales: sum
             });
+            return arr;
           });
 
           console.log('sum -', this.state.sumCountSales);

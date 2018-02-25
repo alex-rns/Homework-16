@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactHighcharts from 'react-highcharts';
-import {Grid, Row, Col, Clearfix} from 'react-bootstrap/lib';
+import {Row, Col} from 'react-bootstrap/lib';
 
 //component
 import Box from '../../atoms/Box'
@@ -34,7 +34,6 @@ class Report extends React.Component {
         });
         let chart = this.refs.reportChart.getChart();
         chart.series[0].setData(this.state.dataReport, true);
-
       })
   }
 
@@ -71,7 +70,6 @@ class Report extends React.Component {
           });
           let chart = this.refs.reportChart.getChart();
           chart.series[0].setData(this.state.dataReport, true);
-
         })
     } else if (e.target.value === "Last Week") {
       fetch('/api/user/report/week', {
@@ -88,7 +86,6 @@ class Report extends React.Component {
           });
           let chart = this.refs.reportChart.getChart();
           chart.series[0].setData(this.state.dataReport, true);
-
         })
     }
   };
@@ -114,7 +111,6 @@ class Report extends React.Component {
       </Col>
     )
   }
-
 
 }
 
