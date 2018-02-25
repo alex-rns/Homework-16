@@ -30,8 +30,35 @@ class YourSales extends React.Component {
       .then(res => res.json())
       .then(res => {
         res && res.map((item)=>{
+          let a= 0;
+          for( let i=0; i<res.length;i++){
+            a+=item[1]
+          }
+
+
           console.log('second item -', item[1]);
+          this.setState({
+            sumCountSales: a
+          });
+
+
+          // let arr = [];
+          // arr.push(item[1]);
+          // console.log(arr)
+          // this.setState({
+          //   sumCountSales: arr
+          // })
+
+
+          // let countSales = item[1];
+          // let sumCountSales = 0;
+          // for(let i=0;i<countSales.length;i++){
+          //   sumCountSales += parseInt(countSales[i])
+          // }
+          // console.log(sumCountSales);
         });
+        console.log('123123 -', res);
+        console.log('a -', this.state.sumCountSales);
 
 
         this.setState({
@@ -40,16 +67,10 @@ class YourSales extends React.Component {
         let chart = this.refs.salesChart.getChart();
 
         chart.series[0].setData(this.state.dataSales, true);
-        // chart.setTitle({
-        //   text: this.state.sumCountSales
-        // });
+        chart.setTitle({
+          text: this.state.sumCountSales
+        });
 
-        let countSales = [];
-        let sumCountSales = 0;
-        for(let i=0;i<countSales.length;i++){
-          sumCountSales += parseInt(countSales[i])
-        }
-        console.log(sumCountSales);
 
       })
   }
@@ -64,12 +85,26 @@ class YourSales extends React.Component {
       })
         .then(res => res.json())
         .then(res => {
+          res && res.map((item)=>{
+            let a= 0;
+            for( let i=0; i<res.length;i++){
+              a+=item[1]
+            }
+
+            console.log('second item -', item[1]);
+            this.setState({
+              sumCountSales: a
+            });
+          });
           console.log(res);
           this.setState({
             dataSales: res
           });
           let chart = this.refs.salesChart.getChart();
           chart.series[0].setData(this.state.dataSales, true);
+          chart.setTitle({
+            text: this.state.sumCountSales
+          });
 
 
         })
@@ -82,12 +117,28 @@ class YourSales extends React.Component {
       })
         .then(res => res.json())
         .then(res => {
+
+          res && res.map((item)=>{
+            let a= 0;
+            for( let i=0; i<res.length;i++){
+              a+=item[1]
+            }
+
+            console.log('second item -', item[1]);
+            this.setState({
+              sumCountSales: a
+            });
+          });
+
           console.log(res);
           this.setState({
             dataSales: res
           });
           let chart = this.refs.salesChart.getChart();
           chart.series[0].setData(this.state.dataSales, true);
+          chart.setTitle({
+            text: this.state.sumCountSales
+          });
 
         })
     } else if (e.target.value === "Last Week") {
@@ -99,12 +150,28 @@ class YourSales extends React.Component {
       })
         .then(res => res.json())
         .then(res => {
+
+          res && res.map((item)=>{
+            let a= 0;
+            for( let i=0; i<res.length;i++){
+              a+=item[1]
+            }
+
+            console.log('second item -', item[1]);
+            this.setState({
+              sumCountSales: a
+            });
+          });
+
           console.log(res);
           this.setState({
             dataSales: res
           });
           let chart = this.refs.salesChart.getChart();
           chart.series[0].setData(this.state.dataSales, true);
+          chart.setTitle({
+            text: this.state.sumCountSales
+          });
 
         })
     }
