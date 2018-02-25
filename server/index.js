@@ -12,13 +12,13 @@ const report = {
 
 const yourSales = {
   year: [
-    ["Social Media",190],["Adwords", 190],["E-Commerce",480],["Websites",340],["Logo", 360]
+    ["Social Media",195],["Adwords", 185],["E-Commerce",482],["Websites",338],["Logo", 360]
   ],
   month: [
-    ["Social Media",60],["Adwords", 100],["E-Commerce",190],["Websites",60],["Logo", 120]
+    ["Social Media",65],["Adwords", 95],["E-Commerce",199],["Websites",55],["Logo", 116]
   ],
   week: [
-    ["Social Media",2],["Adwords", 10],["E-Commerce",120],["Websites",20],["Logo", 50]
+    ["Social Media",2],["Adwords", 11],["E-Commerce",119],["Websites",24],["Logo", 46]
   ]
 };
 
