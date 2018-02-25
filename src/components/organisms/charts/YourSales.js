@@ -11,16 +11,16 @@ import SalesChart from '../../../config/pieChart.config'
 
 class YourSales extends React.Component {
 
-  constructor(props){
+  constructor(props) {
     super(props);
 
-    this.state= {
-      dataSales : [],
+    this.state = {
+      dataSales: [],
       sumCountSales: null
     }
   }
 
-  componentWillMount(){
+  componentWillMount() {
     fetch('/api/user/sales/year', {
       headers: {
         'Content-type': 'application/json'
@@ -29,36 +29,21 @@ class YourSales extends React.Component {
     })
       .then(res => res.json())
       .then(res => {
-        res && res.map((item)=>{
-          let sum= 0;
-          for( let i=0; i<res.length;i++){
-            sum+=item[1]
-          }
+        let arr = [];
+        res && res.map((item) => {
 
-          console.log('second item -', item[1]);
+          arr.push(item[1]);
+
+          let sum = 0;
+          for (let i = 0; i < arr.length; i++) {
+            sum += arr[i]
+          }
           this.setState({
             sumCountSales: sum
           });
-
-
-          // let arr = [];
-          // arr.push(item[1]);
-          // console.log(arr)
-          // this.setState({
-          //   sumCountSales: arr
-          // })
-
-
-          // let countSales = item[1];
-          // let sumCountSales = 0;
-          // for(let i=0;i<countSales.length;i++){
-          //   sumCountSales += parseInt(countSales[i])
-          // }
-          // console.log(sumCountSales);
         });
-        console.log('123123 -', res);
-        console.log('a -', this.state.sumCountSales);
 
+        console.log('sum -', this.state.sumCountSales);
 
         this.setState({
           dataSales: res,
@@ -69,8 +54,6 @@ class YourSales extends React.Component {
         chart.setTitle({
           text: this.state.sumCountSales
         });
-
-
       })
   }
 
@@ -84,33 +67,33 @@ class YourSales extends React.Component {
       })
         .then(res => res.json())
         .then(res => {
-          res && res.map((item)=>{
+          let arr = [];
+          res && res.map((item) => {
 
+            arr.push(item[1]);
 
-            let sum= 0;
-            for( let i=0; i<res.length;i++){
-              sum+=item[1]
+            let sum = 0;
+            for (let i = 0; i < arr.length; i++) {
+              sum += arr[i]
             }
-
-            console.log('second item -', item[1]);
             this.setState({
               sumCountSales: sum
             });
           });
 
+          console.log('sum -', this.state.sumCountSales);
 
-          console.log(res);
           this.setState({
             dataSales: res
           });
+
           let chart = this.refs.salesChart.getChart();
           chart.series[0].setData(this.state.dataSales, true);
           chart.setTitle({
             text: this.state.sumCountSales
           });
-
-
         })
+
     } else if (e.target.value === "Last Month") {
       fetch('/api/user/sales/month', {
         headers: {
@@ -120,30 +103,33 @@ class YourSales extends React.Component {
       })
         .then(res => res.json())
         .then(res => {
+          let arr = [];
+          res && res.map((item) => {
 
-          res && res.map((item)=>{
-            let sum= 0;
-            for( let i=0; i<res.length;i++){
-              sum+=item[1]
+            arr.push(item[1]);
+
+            let sum = 0;
+            for (let i = 0; i < arr.length; i++) {
+              sum += arr[i]
             }
-
-            console.log('second item -', item[1]);
             this.setState({
               sumCountSales: sum
             });
           });
 
-          console.log(res);
+          console.log('sum -', this.state.sumCountSales);
+
           this.setState({
             dataSales: res
           });
+
           let chart = this.refs.salesChart.getChart();
           chart.series[0].setData(this.state.dataSales, true);
           chart.setTitle({
             text: this.state.sumCountSales
           });
-
         })
+
     } else if (e.target.value === "Last Week") {
       fetch('/api/user/sales/week', {
         headers: {
@@ -153,29 +139,31 @@ class YourSales extends React.Component {
       })
         .then(res => res.json())
         .then(res => {
+          let arr = [];
+          res && res.map((item) => {
 
-          res && res.map((item)=>{
-            let sum= 0;
-            for( let i=0; i<res.length;i++){
-              sum+=item[1]
+            arr.push(item[1]);
+
+            let sum = 0;
+            for (let i = 0; i < arr.length; i++) {
+              sum += arr[i]
             }
-
-            console.log('second item -', item[1]);
             this.setState({
               sumCountSales: sum
             });
           });
 
-          console.log(res);
+          console.log('sum -', this.state.sumCountSales);
+
           this.setState({
             dataSales: res
           });
+
           let chart = this.refs.salesChart.getChart();
           chart.series[0].setData(this.state.dataSales, true);
           chart.setTitle({
             text: this.state.sumCountSales
           });
-
         })
     }
   };
@@ -184,7 +172,6 @@ class YourSales extends React.Component {
   render() {
 
     const yourSalesSelect = ["Last Year", "Last Month", "Last Week"];
-
 
     return (
       <Col md={5}>
@@ -203,7 +190,6 @@ class YourSales extends React.Component {
       </Col>
     )
   }
-
 
 }
 

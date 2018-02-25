@@ -15,7 +15,7 @@ const yourSales = {
     ["Social Media",195],["Adwords", 185],["E-Commerce",482],["Websites",338],["Logo", 360]
   ],
   month: [
-    ["Social Media",65],["Adwords", 95],["E-Commerce",199],["Websites",55],["Logo", 116]
+    ["Social Media",75],["Adwords", 99],["E-Commerce",199],["Websites",55],["Logo", 117]
   ],
   week: [
     ["Social Media",2],["Adwords", 11],["E-Commerce",119],["Websites",24],["Logo", 46]
