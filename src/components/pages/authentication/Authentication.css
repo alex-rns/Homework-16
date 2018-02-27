@@ -6,13 +6,38 @@
   align-items: center;
   justify-content: center; }
 
+.auth-tab {
+  padding: 35px 0 35px;
+  display: flex;
+  position: relative; }
+  .auth-tab a {
+    padding: 0 40px;
+    font: 500 1.3vmax/48px Roboto, sans-serif; }
+
+.LoginLink.ActiveTab::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  border-bottom: solid 10px #5584ff; }
+
+.RegisterLink.ActiveTab::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  border-bottom: solid 15px #5584ff; }
+
 .auth-wrapp {
   width: 60%; }
 
 .auth-box {
+  padding-left: 40px;
   display: flex;
   justify-content: space-between;
-  padding: 35px 0 35px 35px;
+  align-items: center;
   background: #0e1a35; }
 
 .auth {

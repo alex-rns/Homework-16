@@ -8,14 +8,45 @@
   align-items: center
   justify-content: center
 
+.auth-tab
+  padding: 35px 0 35px
+  display: flex
+  position: relative
+  a
+    padding: 0 40px
+    font: 500 1.3vmax/48px Roboto, sans-serif
+
+
+.LoginLink.ActiveTab
+  &::before
+    content: ''
+    position: absolute
+    bottom: 0
+    right: 0
+    width: 50%
+    border-bottom: solid 10px $accent-color
+
+.RegisterLink.ActiveTab
+  &::before
+    content: ''
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 50%
+    border-bottom: solid 15px $accent-color
+
 .auth-wrapp
   width: 60%
 
 .auth-box
+  padding-left: 40px
   display: flex
   justify-content: space-between
-  padding: 35px 0 35px 35px
+  align-items: center
+  //padding: 35px 0 35px 35px
   background: $logo-bg
+
+
 
 .auth
   background-color: #fff
@@ -25,6 +56,8 @@
   background-color: #f6f7fa
   display: flex
   justify-content: center
+
+
 
 
 

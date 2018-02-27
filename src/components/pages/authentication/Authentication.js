@@ -31,21 +31,24 @@ class Authentication extends React.Component {
   };
 
   render() {
-
     return (
 
       <div className="Authentication">
         <div className="auth-wrapp">
           <div className='auth-box'>
             <img src={logo} alt="Logo"/>
-            <div>
+            <div className='auth-tab'>
                 <a
-                  className={this.state.tab === 'regTab' ? 'ActiveTab RegisterLink' : 'RegisterLink'}
-                  onClick={() => this.tabChange('regTab')}>Registration
+                  className={this.state.tab === 'regTab'
+                    ? 'ActiveTab RegisterLink'
+                    : 'RegisterLink'}
+                  onClick={() => this.tabChange('regTab')}>Register
                 </a>
 
                 <a
-                  className={this.state.tab === 'logTab' ? 'ActiveTab LoginLink' : 'LoginLink'}
+                  className={this.state.tab === 'logTab'
+                    ? 'ActiveTab LoginLink'
+                    : 'LoginLink'}
                   onClick={() => this.tabChange('logTab')}>Login
                 </a>
 
@@ -53,10 +56,9 @@ class Authentication extends React.Component {
           </div>
 
           <div className="auth">
-            {this.state.tab === 'logTab' ?
-              <Login/>
-              :
-              <Registration/>
+            {this.state.tab === 'logTab'
+              ? <Login/>
+              : <Registration/>
             }
           </div>
 

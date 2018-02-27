@@ -11,7 +11,7 @@ body
   height: 100%
   padding: 0
   margin: 0
-  font: 400 1.0vw/28px Roboto, sans-serif
+  font: 400 14px/28px Roboto, sans-serif
 
   background: #fff
   color: #8492af
@@ -50,11 +50,11 @@ a
     text-decoration: none
 
 ::-webkit-input-placeholder
-  font: 1.1vw/28px Roboto, serif
+  font: 1.1vmax/28px Roboto, serif
   color: #282828
 ::-moz-placeholder
   color: #282828
-  font: 1.1vw/28px Roboto, serif
+  font: 1.1vmax/28px Roboto, serif
 
 .float-r
   float: right !important
@@ -94,6 +94,48 @@ a
   background: #f6f7fa
   padding: 30px
 
+
+//fonts
+
 h2
   color: #0e1a35
-  font: 700 2.2vw Roboto, sans-serif
+  font: 700 2.2vmax Roboto, sans-serif
+
+//media-fonts
+
+
+@media only screen and (max-width : 1200px)
+  body
+    font-size: 1vmax
+  h2
+    font-size: 2.2vmax
+
+@media only screen and (max-width : 992px)
+  body
+    font-size: 1.2vmax
+  h2
+    font-size: 2.3vmax
+
+@media only screen and (max-width : 768px)
+  body
+    font-size: 1.5vmax
+  h2
+    font-size: 2.4vmax
+
+@media only screen and (max-width : 576px)
+  body
+    font-size: 1.7vmax
+  h2
+    font-size: 2.6vmax
+
+@media only screen and (max-width : 480px)
+  body
+    font-size: 2vmax
+  h2
+    font-size: 2.8vmax
+
+@media only screen and (max-width : 320px)
+  body
+    font-size: 2.2vmax
+  h2
+    font-size: 3vmax

@@ -3,10 +3,11 @@
 .Login, .Registration
   text-align: center
 
+
 .welcome
   padding: 80px 0
   color: #8492af
-  font: 300 48px/14.4px Roboto, sans-serif
+  font: 300 2.4vmax/14.4px Roboto, sans-serif
   span
     color: #5384ff
 
@@ -18,7 +19,7 @@
 
 .welcome-input, .welcome-input::placeholder
   z-index: 1
-  font: 300 24px/14.4px Roboto, sans-serif
+  font: 300 calc(0.3em + 1.2vmax)/14.4px Roboto, sans-serif
   color: #8492af
   padding: 14px 0
 
@@ -30,3 +31,37 @@
 
 .welcome-icon
   text-align: left
+  font-size: 1.5vmax
+
+.auth-tab
+  margin-left: 10px
+
+
+
+
+
+
+//media-queries
+@media only screen and (max-width : 1200px)
+  .welcome
+    font-size: 2.7vmax
+
+@media only screen and (max-width : 992px)
+  .welcome
+    font-size: 3.1vmax
+
+@media only screen and (max-width : 768px)
+  .welcome
+    font-size: 3.3vmax
+
+@media only screen and (max-width : 576px)
+  .welcome
+    font-size: 3.3vmax
+
+@media only screen and (max-width : 480px)
+  .welcome
+    font-size: 2.5vmax
+
+@media only screen and (max-width : 320px)
+  .welcome
+    font-size: 2.0vmax
