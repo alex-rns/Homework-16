@@ -9,6 +9,7 @@ import userPhoto from '../../../assets/img/user-photo.png'
 import NotificationButton from "../../atoms/buttons/NotificationButton";
 import MessageButton from "../../atoms/buttons/MessageButton";
 import AddProjectButton from "../../atoms/buttons/AddProjectButton";
+import SearchButton from "../../atoms/buttons/SearchButton";
 
 const userData = {
   name: 'qwe',
@@ -32,8 +33,17 @@ class TopBar extends React.Component {
       <div className='TopBar'>
         <div className="top-bar-left-side">
 
-          <button onClick={this.props.handleMouseDown}>Open menu</button>
-          <button>search</button>
+          <FontAwesome
+            className='bars-caret-icon'
+            name='caret-left'
+          />
+          <button className='bars-button' onClick={this.props.handleMouseDown}>
+            <FontAwesome
+            className='bars-button-icon'
+            name='bars'
+            size='2x'
+          /></button>
+          <SearchButton/>
         </div>
 
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import FontAwesome from 'react-fontawesome';
+import {withRouter} from 'react-router-dom';
 import Dropdown, {DropdownTrigger, DropdownContent} from 'react-simple-dropdown';
 import './AccountDropdown.css'
 
@@ -8,6 +9,15 @@ class AccountDropdown extends React.Component {
 
   handleLinkClick = () => {
     this.refs.dropdown.hide();
+  };
+
+  handleLogOut = (e) => {
+
+    const {history} = this.props;
+
+    e.preventDefault();
+    localStorage.removeItem('userCheck');
+    history.push('/authentication')
   };
 
 
@@ -50,7 +60,7 @@ class AccountDropdown extends React.Component {
               </a>
             </li>
             <li className="account-dropdown__link">
-              <a className="account-dropdown__link__anchor" href="#" onClick={this.handleLogOut}>
+              <a className="account-dropdown__link__anchor" onClick={this.handleLogOut}>
                 Log out
               </a>
             </li>
@@ -64,4 +74,4 @@ class AccountDropdown extends React.Component {
 }
 
 
-export default AccountDropdown;
+export default withRouter(AccountDropdown);
