@@ -13,6 +13,8 @@
   .auth-tab a {
     padding: 0 40px;
     font: 500 1.3vmax/48px Roboto, sans-serif; }
+    .auth-tab a:hover {
+      color: #fff; }
 
 .LoginLink.ActiveTab::before {
   content: '';
@@ -20,7 +22,7 @@
   bottom: 0;
   right: 0;
   width: 50%;
-  border-bottom: solid 10px #5584ff; }
+  border-bottom: solid 5px #5584ff; }
 
 .RegisterLink.ActiveTab::before {
   content: '';
@@ -28,7 +30,7 @@
   bottom: 0;
   left: 0;
   width: 50%;
-  border-bottom: solid 15px #5584ff; }
+  border-bottom: solid 5px #5584ff; }
 
 .auth-wrapp {
   width: 60%; }
@@ -48,3 +50,43 @@
   background-color: #f6f7fa;
   display: flex;
   justify-content: center; }
+
+@media only screen and (max-width: 1200px) {
+  /**/ }
+
+@media only screen and (max-width: 992px) {
+  .logo {
+    width: 150px; }
+  .auth-tab {
+    padding: 25px 0 25px; }
+    .auth-tab a {
+      padding: 0 30px; } }
+
+@media only screen and (max-width: 768px) {
+  .logo {
+    width: 120px; }
+  .auth-tab {
+    padding: 18px 0 18px; }
+    .auth-tab a {
+      padding: 0 20px; } }
+
+@media only screen and (max-width: 576px) {
+  .logo {
+    width: 100px; }
+  .auth-box {
+    padding-left: 15px; }
+  .auth-tab {
+    padding: 5px 0 5px; }
+    .auth-tab a {
+      padding: 0 20px; } }
+
+@media only screen and (max-width: 480px) {
+  .logo {
+    width: 60px; }
+  .auth-tab {
+    padding: 0; }
+    .auth-tab a {
+      padding: 0 10px; } }
+
+@media only screen and (max-width: 320px) {
+  /**/ }

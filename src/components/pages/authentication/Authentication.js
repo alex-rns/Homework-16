@@ -36,7 +36,7 @@ class Authentication extends React.Component {
       <div className="Authentication">
         <div className="auth-wrapp">
           <div className='auth-box'>
-            <img src={logo} alt="Logo"/>
+            <img className='logo' src={logo} alt="Logo"/>
             <div className='auth-tab'>
                 <a
                   className={this.state.tab === 'regTab'
