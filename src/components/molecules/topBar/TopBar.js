@@ -12,21 +12,12 @@ import AddProjectButton from "../../atoms/buttons/AddProjectButton";
 import SearchButton from "../../atoms/buttons/SearchButton";
 
 const userData = {
-  name: 'qwe',
+  name: JSON.parse(localStorage.getItem("userName")),
   userPhoto: userPhoto
 };
 
 
 class TopBar extends React.Component {
-
-  handleLogOut = (e) => {
-
-    const {history} = this.props;
-
-    e.preventDefault();
-    localStorage.removeItem('userCheck');
-    history.push('/authentication')
-  };
 
   render() {
     return (
