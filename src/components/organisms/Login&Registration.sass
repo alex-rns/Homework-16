@@ -9,7 +9,7 @@
   color: #8492af
   font: 300 2.4vmax/14.4px Roboto, sans-serif
   span
-    color: #5384ff
+    color: $accent-color
 
 .welcome-input-wrap
   margin: 0 auto
@@ -28,10 +28,15 @@
   width: 90%
   border: none
   color: #8492af
+  &:focus .welcome-input-wrap
+    border-bottom: 5px solid $accent-color
+
+
 
 .welcome-icon
   text-align: left
   font-size: 1.5vmax
+  color: $accent-color
 
 .auth-tab
   margin-left: 10px

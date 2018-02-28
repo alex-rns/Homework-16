@@ -1,0 +1,41 @@
+.dropdown
+  margin-left: 30px
+  min-width: 150px
+  z-index: 1000
+  display: inline-block
+  a
+    color: #000
+
+.dropdown__content
+  display: none
+  position: absolute
+
+.dropdown--active .dropdown__content
+  display: block
+
+.account-dropdown__identity
+  border-bottom: 1px solid #dadfe7
+
+.dropdown__trigger
+  display: flex
+  align-items: center
+
+.account-dropdown__name
+  margin-left: 10px
+  height: 32px
+
+.dropdown-caret
+  color: #000
+  font-size: 18px
+
+.dropdown__content
+  background: #fff
+  border: 1px solid #dadfe7
+  padding: 5px 15px 0 15px
+  margin-top: 15px
+
+.account-dropdown__link
+  padding: 5px
+
+.account-dropdown__link:last-of-type
+  border-top: 1px solid #dadfe7
