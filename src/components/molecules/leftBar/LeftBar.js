@@ -75,9 +75,6 @@ class LeftBar extends React.Component {
                   name='cog'
                 /> Settings </NavLink>
             </li>
-            <li className="nav-item">
-              <NavLink onClick={this.props.handleLinkClick} exact to="/authentication"> Authentication </NavLink>
-            </li>
           </ul>
         </nav>
       </div>

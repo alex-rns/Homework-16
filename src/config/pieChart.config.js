@@ -14,7 +14,7 @@ const SalesChart = {
     text: null,
     style: {
       color: '#8492af',
-      font: '700 36px "Roboto", sans-serif'
+      font: '700 2.2vmax "Roboto", sans-serif'
     },
     verticalAlign: 'middle',
     floating: true,
@@ -25,7 +25,7 @@ const SalesChart = {
     text: 'sales',
     style: {
       color: '#8492af',
-      font: '300 20px "Roboto", sans-serif'
+      font: '300 1.5vmax "Roboto", sans-serif'
     },
     verticalAlign: 'middle',
     floating: true,
@@ -40,8 +40,8 @@ const SalesChart = {
     itemMarginTop: 5,
     itemMarginBottom: 5,
     itemStyle: {
+      font: '300 1.2vmax "Roboto", sans-serif',
       color: '#8492af',
-      fontSize: '16px',
       fontWeight: 400
     },
     itemCheckboxStyle: {
