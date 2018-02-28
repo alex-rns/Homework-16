@@ -1,22 +1,24 @@
 import React from 'react';
-import {NavLink } from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
+import FontAwesome from 'react-fontawesome';
 import './LeftBar.css'
 
 //components
 import logo from '../../../assets/img/logo.png'
 
 class LeftBar extends React.Component {
+
   render() {
 
-  let visibility = 'hide';
+    let visibility = 'hide';
 
-  if(this.props.menuVisibility) {
-    visibility = 'show'
-  }
+    if (this.props.menuVisibility) {
+      visibility = 'show'
+    }
 
-    return(
+    return (
       <div
-        className={ 'LeftBar ' + visibility}
+        className={'LeftBar ' + visibility}
       >
         <div className="logo">
           <img src={logo} alt="Logo"/>
@@ -26,25 +28,55 @@ class LeftBar extends React.Component {
         <nav className="nav-bar">
           <ul>
             <li className="nav-item">
-              <NavLink exact to="/"> Home </NavLink>
+              <NavLink onClick={this.props.handleLinkClick} exact to="/">
+                <FontAwesome
+                  className='nav-icon nav-icon-home'
+                  name='home'
+                />
+                Home </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink exact to="/workflow"> Workflow </NavLink>
+              <NavLink onClick={this.props.handleLinkClick} exact to="/workflow">
+                <FontAwesome
+                  className='nav-icon nav-icon-home'
+                  name='pause'
+                  rotate='90'
+                />
+                Workflow </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink exact to="/statistics"> Statistics </NavLink>
+              <NavLink onClick={this.props.handleLinkClick} exact to="/statistics">
+                <FontAwesome
+                  className='nav-icon nav-icon-home'
+                  name='check'
+                />
+                Statistics </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink exact to="/calendar"> Calendar </NavLink>
+              <NavLink onClick={this.props.handleLinkClick} exact to="/calendar">
+                <FontAwesome
+                  className='nav-icon nav-icon-home'
+                  name='calendar'
+                />
+                Calendar </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink exact to="/users"> Users </NavLink>
+              <NavLink onClick={this.props.handleLinkClick} exact to="/users">
+                <FontAwesome
+                  className='nav-icon nav-icon-home'
+                  name='user'
+                />
+                Users </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink exact to="/settings"> Settings </NavLink>
+              <NavLink onClick={this.props.handleLinkClick} exact to="/settings">
+                <FontAwesome
+                  className='nav-icon nav-icon-home'
+                  name='cog'
+                /> Settings </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink exact to="/authentication"> Authentication </NavLink>
+              <NavLink onClick={this.props.handleLinkClick} exact to="/authentication"> Authentication </NavLink>
             </li>
           </ul>
         </nav>

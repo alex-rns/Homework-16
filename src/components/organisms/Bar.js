@@ -12,13 +12,15 @@ class Bar extends React.Component {
     };
   }
 
+
+  //hide leftBar on click to content
   handleClickOutside = () => {
     this.setState({
       visible: false
     })
   };
 
-  handleMouseDown = (e) => {
+  handleMouseDown = () => {
     this.toggleMenu()
   };
 
@@ -28,11 +30,19 @@ class Bar extends React.Component {
     })
   };
 
+
+  //hide leftBar on click link
+  handleLinkClick = () => {
+    this.setState({
+      visible: false
+    })
+  };
+
   render() {
     return (
       <div>
         <TopBar handleMouseDown={this.handleMouseDown}/>
-        <LeftBar onMouseDown={this.handleClickOutside} menuVisibility={this.state.visible}/>
+        <LeftBar handleLinkClick={this.handleLinkClick} onMouseDown={this.handleClickOutside} menuVisibility={this.state.visible}/>
       </div>
     )
   }
