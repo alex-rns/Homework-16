@@ -4,12 +4,12 @@ import FontAwesome from 'react-fontawesome';
 import './TopBar.css';
 
 //components
-import AccountDropdown from '../../atoms/AccountDropdown'
+import AccountDropdown from '../../atoms/AccountDropdown/AccountDropdown'
 import userPhoto from '../../../assets/img/user-photo.png'
-import NotificationButton from "../../atoms/buttons/NotificationButton";
-import MessageButton from "../../atoms/buttons/MessageButton";
+import NotificationButton from "../../atoms/buttons/NotificationButton/NotificationButton";
+import MessageButton from "../../atoms/buttons/MessageButton/MessageButton";
 import AddProjectButton from "../../atoms/buttons/AddProjectButton/AddProjectButton";
-import SearchButton from "../../atoms/buttons/SearchButton";
+import SearchButton from "../../atoms/buttons/SearchButton/SearchButton";
 
 const userData = {
   name: JSON.parse(localStorage.getItem("userName")),

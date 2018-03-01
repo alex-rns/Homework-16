@@ -3,8 +3,8 @@ import ReactHighcharts from 'react-highcharts';
 import {Row, Col} from 'react-bootstrap/lib';
 import '../../pages/home/Home.css'
 //component
-import Box from '../../atoms/Box'
-import Select from '../../atoms/Select'
+import Box from '../../atoms/Box/Box'
+import Select from '../../atoms/Select/Select'
 
 //config
 import SalesChart from '../../../config/pieChart.config'

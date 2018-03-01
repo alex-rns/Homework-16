@@ -4,7 +4,7 @@ import FontAwesome from 'react-fontawesome';
 import './Login&Registration.css'
 
 //components
-import WelcomeButton from '../atoms/buttons/WelcomeButton';
+import WelcomeButton from '../../atoms/buttons/WelcomeButton/WelcomeButton';
 
 
 const buttonText = 'Register';

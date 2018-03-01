@@ -1,9 +1,9 @@
 import React from 'react';
 import { Col } from 'react-bootstrap/lib';
-import '../pages/home/Home.css'
+import '../../pages/home/Home.css'
 
 //components
-import Box from '../atoms/Box'
+import Box from '../../atoms/Box/Box'
 
 class HomeActivity extends React.Component {
   render(){

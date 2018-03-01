@@ -2,7 +2,7 @@ import React from 'react';
 import {Route, Redirect} from 'react-router-dom';
 
 //components
-import Bar from './components/organisms/Bar'
+import Bar from './components/organisms/Bar/Bar'
 
 const PrivateRouter = ({component: Component, ...rest}) => {
 

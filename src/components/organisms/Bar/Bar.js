@@ -1,6 +1,6 @@
 import React from 'react';
-import TopBar from '../molecules/topBar/TopBar';
-import LeftBar from '../molecules/leftBar/LeftBar';
+import TopBar from '../../molecules/topBar/TopBar';
+import LeftBar from '../../molecules/leftBar/LeftBar';
 import onClickOutside from 'react-onclickoutside'
 
 class Bar extends React.Component {

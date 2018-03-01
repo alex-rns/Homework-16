@@ -2,8 +2,8 @@ import React from 'react';
 import './Authentication.css';
 
 //components
-import Registration from "../../organisms/Registration";
-import Login from '../../organisms/Login';
+import Registration from "../../organisms/Login&Registration/Registration";
+import Login from '../../organisms/Login&Registration/Login';
 import logo from '../../../assets/img/logo.png';
 
 

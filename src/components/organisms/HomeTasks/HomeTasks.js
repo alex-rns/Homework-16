@@ -1,11 +1,11 @@
 import React from 'react';
 import {Col} from 'react-bootstrap/lib';
-import '../pages/home/Home.css'
+import '../../pages/home/Home.css'
 import './HomeTasks.css'
 //components
-import Box from '../atoms/Box'
-import Task from "../molecules/Task/Task";
-
+import Box from '../../atoms/Box/Box'
+import Task from "../../molecules/Task/Task";
+import InfoCircle from "../../atoms/buttons/InfoCircle/InfoCircle";
 
 const dataTask = [
   {
@@ -37,9 +37,9 @@ class HomeTasks extends React.Component {
         <Box>
           <div className="home-tasks-header">
             <h3>Tasks</h3>
-            <div className="button-wrap">
-              <button>5</button>
-              <button>2</button>
+            <div className="deadline-button-wrap">
+              <InfoCircle/>
+              <InfoCircle/>
             </div>
           </div>
         </Box>

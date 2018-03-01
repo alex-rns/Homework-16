@@ -3,9 +3,9 @@ import FontAwesome from 'react-fontawesome';
 import './Task.css'
 
 //components
-import Box from '../../atoms/Box'
-import CircleLetter from "../../atoms/CircleLetter";
-import TaskDropdownButton from "../../atoms/buttons/DropdownButton/DropdownButton";
+import Box from '../../atoms/Box/Box'
+import CircleLetter from "../../atoms/CircleLetter/CircleLetter";
+import DropdownButton from "../../atoms/buttons/DropdownButton/DropdownButton";
 
 
 class Task extends React.Component {
@@ -30,7 +30,7 @@ class Task extends React.Component {
                       {item.deadline}
                     </span>
                   </div>
-                  <TaskDropdownButton/>
+                  <DropdownButton/>
                 </div>
               </Box>
             )
