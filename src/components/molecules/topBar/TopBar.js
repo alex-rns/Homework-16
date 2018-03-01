@@ -8,7 +8,7 @@ import AccountDropdown from '../../atoms/AccountDropdown'
 import userPhoto from '../../../assets/img/user-photo.png'
 import NotificationButton from "../../atoms/buttons/NotificationButton";
 import MessageButton from "../../atoms/buttons/MessageButton";
-import AddProjectButton from "../../atoms/buttons/AddProjectButton";
+import AddProjectButton from "../../atoms/buttons/AddProjectButton/AddProjectButton";
 import SearchButton from "../../atoms/buttons/SearchButton";
 
 const userData = {

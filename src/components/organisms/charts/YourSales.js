@@ -178,7 +178,7 @@ class YourSales extends React.Component {
     const yourSalesSelect = ["Last Year", "Last Month", "Last Week"];
 
     return (
-      <Col className='your-sales' md={5}>
+      <Col className='YourSales' md={5}>
         <Box>
           <Row>
             <Col xs={6}>

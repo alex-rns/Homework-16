@@ -17,7 +17,7 @@ class Home extends React.Component {
 
     return (
       <div className="Home">
-        <h2 className='hello-user'>Hello {userName}!</h2>
+        <h2 className='hello-user' >Hello {userName}!</h2>
 
         <Grid fluid>
           <Row>

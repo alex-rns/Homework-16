@@ -1,15 +1,15 @@
 import React from 'react';
 import { Col } from 'react-bootstrap/lib';
-
+import '../pages/home/Home.css'
 //components
 import Box from '../atoms/Box'
 
 class HomeMessages extends React.Component {
   render(){
     return(
-      <Col md={4}>
+      <Col className='HomeMessages' md={4}>
         <Box>
-          HomeMessages
+          Messages
         </Box>
       </Col>
     )

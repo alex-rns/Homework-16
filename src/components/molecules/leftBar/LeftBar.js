@@ -39,7 +39,7 @@ class LeftBar extends React.Component {
               <NavLink onClick={this.props.handleLinkClick} exact to="/workflow">
                 <FontAwesome
                   className='nav-icon nav-icon-home'
-                  name='pause'
+                  name='list-ol'
                 />
                 Workflow </NavLink>
             </li>
@@ -47,7 +47,7 @@ class LeftBar extends React.Component {
               <NavLink onClick={this.props.handleLinkClick} exact to="/statistics">
                 <FontAwesome
                   className='nav-icon nav-icon-home'
-                  name='check'
+                  name='chart-line'
                 />
                 Statistics </NavLink>
             </li>
