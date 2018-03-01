@@ -8,7 +8,7 @@ class CircleLetter extends React.Component {
   render(){
     return(
       <div className='CircleLetter'>
-        <span>n</span>
+        <span>{this.props.dataLetter.charAt(0)}</span>
       </div>
     )
   }

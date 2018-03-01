@@ -4,7 +4,7 @@ import './Box.css';
 class Box extends React.Component {
   render(){
     return(
-      <div className='Box Box--withPad'>
+      <div className='Box Box-withPad'>
         {this.props.children}
       </div>
     )
