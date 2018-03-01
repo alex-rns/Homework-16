@@ -27,6 +27,7 @@ class AccountDropdown extends React.Component {
       <Dropdown className="account-dropdown" ref="dropdown">
         <DropdownTrigger>
           <img
+            alt='avatar'
             className="account-dropdown__avatar"
             src={this.props.data.userPhoto}
           />
@@ -45,17 +46,17 @@ class AccountDropdown extends React.Component {
 
           <ul className="account-dropdown__management-links account-dropdown__segment">
             <li className="account-dropdown__link">
-              <a className="account-dropdown__link__anchor" href="#" onClick={this.handleLinkClick}>
+              <a className="account-dropdown__link__anchor" onClick={this.handleLinkClick}>
                 My profile
               </a>
             </li>
             <li className="account-dropdown__link">
-              <a className="account-dropdown__link__anchor" href="#" onClick={this.handleLinkClick}>
+              <a className="account-dropdown__link__anchor" onClick={this.handleLinkClick}>
                 Settings
               </a>
             </li>
             <li className="account-dropdown__link">
-              <a className="account-dropdown__link__anchor" href="#" onClick={this.handleLogOut}>
+              <a className="account-dropdown__link__anchor" onClick={this.handleLogOut}>
                 Help
               </a>
             </li>

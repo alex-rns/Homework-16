@@ -5,6 +5,9 @@ import './Home.css'
 //component
 import YourSales from "../../organisms/charts/YourSales";
 import Report from "../../organisms/charts/Report";
+import Tasks from "../../organisms/HomeTasks";
+import HomeMessages from "../../organisms/HomeMessages";
+import HomeActivity from "../../organisms/HomeActivity";
 
 class Home extends React.Component {
 
@@ -14,12 +17,18 @@ class Home extends React.Component {
 
     return (
       <div className="Home">
-        <h2>Hello {userName}!</h2>
+        <h2 className='hello-user'>Hello {userName}!</h2>
 
         <Grid fluid>
           <Row>
             <YourSales/>
             <Report/>
+          </Row>
+
+          <Row>
+            <Tasks/>
+            <HomeMessages/>
+            <HomeActivity/>
           </Row>
 
         </Grid>

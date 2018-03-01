@@ -40,7 +40,6 @@ class LeftBar extends React.Component {
                 <FontAwesome
                   className='nav-icon nav-icon-home'
                   name='pause'
-                  rotate='90'
                 />
                 Workflow </NavLink>
             </li>

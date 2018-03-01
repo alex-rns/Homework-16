@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactHighcharts from 'react-highcharts';
 import {Row, Col} from 'react-bootstrap/lib';
-
+import '../../pages/home/Home.css'
 //component
 import Box from '../../atoms/Box'
 import Select from '../../atoms/Select'
@@ -178,7 +178,7 @@ class YourSales extends React.Component {
     const yourSalesSelect = ["Last Year", "Last Month", "Last Week"];
 
     return (
-      <Col md={5}>
+      <Col className='your-sales' md={5}>
         <Box>
           <Row>
             <Col xs={6}>
