@@ -7,7 +7,7 @@ import './TopBar.css';
 import AccountDropdown from '../../atoms/AccountDropdown/AccountDropdown'
 import userPhoto from '../../../assets/img/user-photo.png'
 import NotificationButton from "../../atoms/buttons/NotificationButton/NotificationButton";
-import MessageButton from "../../atoms/buttons/MessageButton/MessageButton";
+import MessageButton from "../../atoms/buttons/BarMessageButton/BarMessageButton";
 import AddProjectButton from "../../atoms/buttons/AddProjectButton/AddProjectButton";
 import SearchButton from "../../atoms/buttons/SearchButton/SearchButton";
 

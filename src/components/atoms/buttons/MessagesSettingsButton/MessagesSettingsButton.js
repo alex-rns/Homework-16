@@ -1,15 +1,14 @@
 import React from 'react';
 import FontAwesome from 'react-fontawesome';
-import './MessageButton.css'
+import './BarMessageButton.css'
 
 class MessageButton extends React.Component {
   render() {
     return (
-      <button className='message-button'>
+      <button className='789789'>
         <FontAwesome
-          className='icon-message-button'
-          name='envelope'
-          size='2x'
+          className='icon-messages-box-button'
+          name='cog'
         />
       </button>
     )

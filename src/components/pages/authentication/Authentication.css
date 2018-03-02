@@ -12,7 +12,8 @@
   position: relative; }
   .auth-tab a {
     padding: 0 40px;
-    font: 500 1.3vmax/48px Roboto, sans-serif; }
+    font: 500 1.3vmax/48px Roboto, sans-serif;
+    color: #fff; }
     .auth-tab a:hover {
       color: #fff; }
 
