@@ -5,6 +5,8 @@ import './Message.css'
 //components
 import Box from '../../atoms/Box/Box'
 import AvatarImg from "../../atoms/AvatarImg/AvatarImg";
+import MessagesShareButton from "../../atoms/buttons/MessagesShareButton/MessagesShareButton";
+import MessagesSettingsButton from "../../atoms/buttons/MessagesSettingsButton/MessagesSettingsButton";
 
 
 class Message extends React.Component {
@@ -25,20 +27,8 @@ class Message extends React.Component {
                     </p>
                     <p className='messageText'>{item.text}</p>
                     <div className='message-buttons'>
-                      <button>
-                        <FontAwesome
-                          className='icon-messages-box-button'
-                          name='share'
-                          rotate={180}
-                          flip="horizontal"
-                        />
-                      </button>
-                      <button>
-                        <FontAwesome
-                          className='icon-messages-box-button'
-                          name='cog'
-                        />
-                      </button>
+                      <MessagesShareButton/>
+                      <MessagesSettingsButton/>
                     </div>
                   </div>
 
