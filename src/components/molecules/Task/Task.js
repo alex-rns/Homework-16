@@ -10,7 +10,6 @@ import DropdownButton from "../../atoms/buttons/DropdownButton/DropdownButton";
 
 class Task extends React.Component {
   render() {
-
     return (
       <div>
         {

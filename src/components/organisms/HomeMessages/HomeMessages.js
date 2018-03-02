@@ -7,27 +7,34 @@ import Box from '../../atoms/Box/Box'
 import InfoCircle from "../../atoms/buttons/InfoCircle/InfoCircle";
 import Message from "../../molecules/Message/Message";
 
+import user1 from '../../../assets/img/user-1.png'
+import user2 from '../../../assets/img/user-2.png'
+
 const dataMessage = [
   {
-    user: 'Nina Jones',
-    time: '5 minutes ago',
+    userAvatar: user1,
+    userName: 'Nina Jones',
+    onlineTime: '5 minutes ago',
+    text: 'Hey You! It’s me again',
+    readed: false
+  },
+  {
+    userAvatar: user1,
+    userName: 'Nina Jones',
+    onlineTime: '5 minutes ago',
     text: 'Hey You! It’s me again :-) I attached new',
     readed: false
   },
   {
-    user: 'Nina Jones',
-    time: '5 minutes ago',
-    text: 'Hey You! It’s me again :-) I attached new',
-    readed: false
-  },
-  {
-    user: 'Nina Jones',
-    time: '5 minutes ago',
+    userAvatar: user2,
+    userName: 'James Smith ',
+    onlineTime: '5 minutes ago',
     text: 'Hey You! It’s me again :-) I attached new'
   },
   {
-    user: 'Nina Jones',
-    time: '5 minutes ago',
+    userAvatar: user1,
+    userName: 'Nina Jones',
+    onlineTime: '5 minutes ago',
     text: 'Hey You! It’s me again :-) I attached new'
   },
 ];

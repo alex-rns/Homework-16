@@ -1,5 +1,6 @@
 import React from 'react';
 import FontAwesome from 'react-fontawesome';
+import './Message.css'
 
 //components
 import Box from '../../atoms/Box/Box'
@@ -16,12 +17,32 @@ class Message extends React.Component {
             return (
               <Box key={index}>
                 <div className='Message'>
-                  <AvatarImg/>
-
-                  <div className="task-tittle">
-                    <h4>{item.title}</h4>
-
+                  <AvatarImg dataImg={item.userAvatar}/>
+                  <div className='task-body'>
+                    <p className='userName'>{item.userName}
+                      <span className='online-time'>{item.onlineTime}
+                      </span>
+                    </p>
+                    <p className='messageText'>{item.text}</p>
+                    <div className='message-buttons'>
+                      <button>
+                        <FontAwesome
+                          className='icon-messages-box-button'
+                          name='share'
+                          rotate={180}
+                          flip="horizontal"
+                        />
+                      </button>
+                      <button>
+                        <FontAwesome
+                          className='icon-messages-box-button'
+                          name='cog'
+                        />
+                      </button>
+                    </div>
                   </div>
+
+
                 </div>
               </Box>
             )
