@@ -26,10 +26,7 @@ class Activity extends React.Component {
                       </span>
                     </p>
                     <p className='messageText'>{item.text}</p>
-                    <div className='message-buttons'>
-                      <MessagesShareButton/>
-                      <MessagesSettingsButton/>
-                    </div>
+
                   </div>
 
 
