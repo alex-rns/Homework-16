@@ -15,27 +15,29 @@ const dataMessage = [
     userAvatar: user1,
     userName: 'Nina Jones',
     onlineTime: '5 minutes ago',
-    text: 'Hey You! It’s me again',
-    readed: false
+    text: 'Hey You! It’s me again :-) I attached new',
+    read: 'noread'
   },
   {
     userAvatar: user1,
     userName: 'Nina Jones',
     onlineTime: '5 minutes ago',
     text: 'Hey You! It’s me again :-) I attached new',
-    readed: false
+    read: 'noread'
   },
   {
     userAvatar: user2,
     userName: 'James Smith ',
     onlineTime: '5 minutes ago',
-    text: 'Hey You! It’s me again :-) I attached new'
+    text: 'Hey You! It’s me again :-) I attached new',
+    read: 'readed'
   },
   {
     userAvatar: user1,
     userName: 'Nina Jones',
     onlineTime: '5 minutes ago',
-    text: 'Hey You! It’s me again :-) I attached new'
+    text: 'Hey You! It’s me again :-) I attached new',
+    read: 'readed'
   },
 ];
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import FontAwesome from 'react-fontawesome';
-import './Message.css'
+import './Activity.css'
 
 //components
 import Block from '../../atoms/Block/Block'
@@ -9,7 +9,7 @@ import MessagesShareButton from "../../atoms/buttons/MessagesShareButton/Message
 import MessagesSettingsButton from "../../atoms/buttons/MessagesSettingsButton/MessagesSettingsButton";
 
 
-class Message extends React.Component {
+class Activity extends React.Component {
   render() {
 
     return (
@@ -17,7 +17,7 @@ class Message extends React.Component {
         {
           this.props.data.map((item, index) => {
             return (
-              <Block bg={item.read} key={index}>
+              <Block key={index}>
                 <div className='Message'>
                   <AvatarImg dataImg={item.userAvatar}/>
                   <div className='task-body'>
@@ -43,4 +43,4 @@ class Message extends React.Component {
   }
 }
 
-export default Message;
+export default Activity;
