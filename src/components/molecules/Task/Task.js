@@ -3,7 +3,7 @@ import FontAwesome from 'react-fontawesome';
 import './Task.css'
 
 //components
-import Box from '../../atoms/Box/Box'
+import Block from '../../atoms/Block/Block'
 import CircleLetter from "../../atoms/CircleLetter/CircleLetter";
 import DropdownButton from "../../atoms/buttons/DropdownButton/DropdownButton";
 
@@ -15,23 +15,25 @@ class Task extends React.Component {
         {
           this.props.data.map((item, index) => {
             return (
-              <Box key={index}>
+              <Block key={index}>
                 <div className='Task'>
-                  <CircleLetter dataLetter={item.title}/>
-                  <div className="task-tittle">
-                    <h4>{item.title}</h4>
-                    <span className={item.deadlineCheck? 'delay': null
-                    }>
+                  <div className="task-wrap">
+                    <CircleLetter dataLetter={item.title}/>
+                    <div className="task-tittle">
+                      <h4>{item.title}</h4>
+                      <span className={item.deadlineCheck ? 'delay' : null
+                      }>
                       <FontAwesome
                         className='task-time-icon'
                         name='clock'
                       />
-                      {item.deadline}
+                        {item.deadline}
                     </span>
+                    </div>
                   </div>
                   <DropdownButton/>
                 </div>
-              </Box>
+              </Block>
             )
           })
         }

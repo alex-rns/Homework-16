@@ -3,7 +3,7 @@ import FontAwesome from 'react-fontawesome';
 import './Message.css'
 
 //components
-import Box from '../../atoms/Box/Box'
+import Block from '../../atoms/Block/Block'
 import AvatarImg from "../../atoms/AvatarImg/AvatarImg";
 import MessagesShareButton from "../../atoms/buttons/MessagesShareButton/MessagesShareButton";
 import MessagesSettingsButton from "../../atoms/buttons/MessagesSettingsButton/MessagesSettingsButton";
@@ -17,7 +17,7 @@ class Message extends React.Component {
         {
           this.props.data.map((item, index) => {
             return (
-              <Box key={index}>
+              <Block key={index}>
                 <div className='Message'>
                   <AvatarImg dataImg={item.userAvatar}/>
                   <div className='task-body'>
@@ -34,7 +34,7 @@ class Message extends React.Component {
 
 
                 </div>
-              </Box>
+              </Block>
             )
           })
         }
