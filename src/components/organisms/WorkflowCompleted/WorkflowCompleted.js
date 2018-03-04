@@ -1,11 +1,10 @@
 import React from 'react';
 import {Col} from 'react-bootstrap/lib';
-import '../../pages/home/Home.css'
-import './WorkflowCompleted.css'
+
+
 //components
-import Box from '../../atoms/Box/Box'
+
 import Task from "../../molecules/Task/Task";
-import InfoCircle from "../../atoms/buttons/InfoCircle/InfoCircle";
 
 const dataWorkflow = [
   {
@@ -35,11 +34,10 @@ class WorkflowCompleted extends React.Component {
     return (
       <Col className='WorkflowCompleted' md={4}>
 
-        <Box>
           <div className="workflow-header">
-            <h3>To Do<span>(6)</span></h3>
+            <h2>Completed<span>(4)</span></h2>
+
           </div>
-        </Box>
 
         <Task data={dataWorkflow}/>
 
