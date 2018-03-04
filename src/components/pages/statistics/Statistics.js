@@ -4,6 +4,7 @@ import {Grid, Row} from 'react-bootstrap/lib';
 //component
 import Stats from "../../organisms/Stats/Stats";
 import ActiveUsers from "../../organisms/charts/ActiveUsers/ActiveUsers";
+import TotalSales from "../../organisms/charts/TotalSales/TotalSales";
 
 class Statistics extends React.Component {
 
@@ -19,7 +20,7 @@ class Statistics extends React.Component {
           </Row>
 
           <Row>
-            123
+            <TotalSales/>
           </Row>
 
         </Grid>

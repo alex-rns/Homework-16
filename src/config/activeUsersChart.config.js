@@ -20,6 +20,14 @@ const ActiveUsersChart = {
     max: 700,
     min: 100,
     tickInterval: 100,
+    labels: {
+      style: {
+        color: "#cdd3df",
+        fontSize: "16px",
+        fontWeight: "700"
+      }
+
+    }
 
   },
   plotOptions: {
@@ -30,7 +38,13 @@ const ActiveUsersChart = {
       },
     },
     series: {
-      color: '#5584ff'
+      color: {
+        linearGradient: { x1: 0, x2: 1, y1: 0, y2: 0 },
+        stops: [
+          [0, '#5782fd'],
+          [1, '#fe3a76']
+        ]
+      }
     }
   },
 

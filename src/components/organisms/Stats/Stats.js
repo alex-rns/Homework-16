@@ -25,6 +25,8 @@ class Stats extends React.Component {
     return (
       <Col className='Stats' md={5}>
         <h2 className='stats-title'>Lorem Ipsum Stats</h2>
+        <Row>
+          <Col md={12} xs={6}>
         <Box>
           <Row>
             <Col className='stat-num' xs={6}>
@@ -36,6 +38,8 @@ class Stats extends React.Component {
             </Col>
           </Row>
         </Box>
+          </Col>
+          <Col md={12} xs={6}>
         <Box>
           <Row>
             <Col className='stat-num' xs={6}>
@@ -47,6 +51,8 @@ class Stats extends React.Component {
             </Col>
           </Row>
         </Box>
+          </Col>
+        </Row>
 
       </Col>
     )

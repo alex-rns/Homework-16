@@ -9,6 +9,8 @@ import Select from '../../../atoms/Select/Select'
 
 //config
 import activeUsersChart from "../../../../config/activeUsersChart.config";
+import ChangeChartButton from "../../../atoms/buttons/ChangeChartButton/ChangeChartButton";
+import DelChartButton from "../../../atoms/buttons/DelChartButton/DelChartButton";
 
 class ActiveUsers extends React.Component {
 
@@ -113,8 +115,9 @@ class ActiveUsers extends React.Component {
             <Col xs={6}>
               <h2>Active Users</h2>
             </Col>
-            <Col className='text-right' xs={6}>
-              123
+            <Col className='chart-button' xs={6}>
+              <ChangeChartButton/>
+              <DelChartButton/>
 
             </Col>
           </Row>
