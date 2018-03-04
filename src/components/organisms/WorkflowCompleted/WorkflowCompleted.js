@@ -36,7 +36,6 @@ class WorkflowCompleted extends React.Component {
 
           <div className="workflow-header">
             <h2>Completed<span>(4)</span></h2>
-
           </div>
 
         <Task data={dataWorkflow}/>

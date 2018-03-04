@@ -16,7 +16,6 @@ const userData = {
   userPhoto: userPhoto
 };
 
-
 class TopBar extends React.Component {
 
   render() {
@@ -37,14 +36,11 @@ class TopBar extends React.Component {
           <SearchButton/>
         </div>
 
-
         <div className="user-panel">
           <AddProjectButton/>
           <MessageButton/>
           <NotificationButton/>
-
           <AccountDropdown data={userData} />
-
         </div>
       </div>
     )

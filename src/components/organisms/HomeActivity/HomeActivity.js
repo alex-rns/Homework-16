@@ -55,9 +55,6 @@ class HomeActivity extends React.Component {
         </Box>
 
         <Activity data={dataActivity}/>
-
-
-
       </Col>
     )
   }

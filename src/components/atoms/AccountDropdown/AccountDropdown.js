@@ -4,7 +4,6 @@ import {withRouter} from 'react-router-dom';
 import Dropdown, {DropdownTrigger, DropdownContent} from 'react-simple-dropdown';
 import './AccountDropdown.css'
 
-
 class AccountDropdown extends React.Component {
 
   handleLinkClick = () => {
@@ -20,9 +19,7 @@ class AccountDropdown extends React.Component {
     history.push('/authentication')
   };
 
-
   render() {
-
     return (
       <Dropdown className="account-dropdown" ref="dropdown">
         <DropdownTrigger>
@@ -73,6 +70,5 @@ class AccountDropdown extends React.Component {
     );
   }
 }
-
 
 export default withRouter(AccountDropdown);

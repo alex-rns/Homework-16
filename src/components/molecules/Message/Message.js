@@ -8,10 +8,8 @@ import AvatarImg from "../../atoms/AvatarImg/AvatarImg";
 import MessagesShareButton from "../../atoms/buttons/MessagesShareButton/MessagesShareButton";
 import MessagesSettingsButton from "../../atoms/buttons/MessagesSettingsButton/MessagesSettingsButton";
 
-
 class Message extends React.Component {
   render() {
-
     return (
       <div>
         {
@@ -31,8 +29,6 @@ class Message extends React.Component {
                       <MessagesSettingsButton/>
                     </div>
                   </div>
-
-
                 </div>
               </Block>
             )

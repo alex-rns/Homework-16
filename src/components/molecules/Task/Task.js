@@ -7,7 +7,6 @@ import Block from '../../atoms/Block/Block'
 import CircleLetter from "../../atoms/CircleLetter/CircleLetter";
 import DropdownButton from "../../atoms/buttons/DropdownButton/DropdownButton";
 
-
 class Task extends React.Component {
   render() {
     return (
@@ -38,8 +37,6 @@ class Task extends React.Component {
           })
         }
       </div>
-
-
     )
   }
 }

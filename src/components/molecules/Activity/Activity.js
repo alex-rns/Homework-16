@@ -1,12 +1,9 @@
 import React from 'react';
-import FontAwesome from 'react-fontawesome';
 import './Activity.css'
 
 //components
 import Block from '../../atoms/Block/Block'
 import AvatarImg from "../../atoms/AvatarImg/AvatarImg";
-import MessagesShareButton from "../../atoms/buttons/MessagesShareButton/MessagesShareButton";
-import MessagesSettingsButton from "../../atoms/buttons/MessagesSettingsButton/MessagesSettingsButton";
 
 
 class Activity extends React.Component {
@@ -26,10 +23,7 @@ class Activity extends React.Component {
                       </span>
                     </p>
                     <p className='messageText'>{item.text}</p>
-
                   </div>
-
-
                 </div>
               </Block>
             )

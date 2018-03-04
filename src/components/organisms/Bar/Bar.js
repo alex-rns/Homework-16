@@ -12,7 +12,6 @@ class Bar extends React.Component {
     };
   }
 
-
   //hide leftBar on click to content
   handleClickOutside = () => {
     this.setState({
@@ -29,7 +28,6 @@ class Bar extends React.Component {
       visible: !this.state.visible
     })
   };
-
 
   //hide leftBar on click link
   handleLinkClick = () => {
