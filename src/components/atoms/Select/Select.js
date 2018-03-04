@@ -7,11 +7,11 @@ class Select extends React.Component {
   render() {
     return (
       <div className='select-wrapp'>
-        <span className='select-label'>Period:</span>
+        <span className='select-label'>{this.props.data.label + ':'}</span>
         <select
           onChange={this.props.onChange}
           className='Select'>
-          {this.props.data.map((item, index) => {
+          {this.props.data.list.map((item, index) => {
             return (
               <option
                 className='select-option'

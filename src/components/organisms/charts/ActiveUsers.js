@@ -7,19 +7,19 @@ import Box from '../../atoms/Box/Box'
 import Select from '../../atoms/Select/Select'
 
 //config
-import reportChart from "../../../config/reportChart.config";
+import activeUsersChart from "../../../config/activeUsersChart.config";
 
-class Report extends React.Component {
+class ActiveUsers extends React.Component {
 
-  constructor(props){
+  constructor(props) {
     super(props);
 
-    this.state= {
-      dataReport : []
+    this.state = {
+      dataReport: []
     }
   }
 
-  componentWillMount(){
+  componentWillMount() {
     fetch('/api/user/report/year', {
       headers: {
         'Content-type': 'application/json'
@@ -32,7 +32,7 @@ class Report extends React.Component {
         this.setState({
           dataReport: res
         });
-        let chart = this.refs.reportChart.getChart();
+        let chart = this.refs.activeUsersChart.getChart();
         chart.series[0].setData(this.state.dataReport, true);
       })
   }
@@ -51,7 +51,7 @@ class Report extends React.Component {
           this.setState({
             dataReport: res
           });
-          let chart = this.refs.reportChart.getChart();
+          let chart = this.refs.activeUsersChart.getChart();
           chart.series[0].setData(this.state.dataReport, true);
 
         })
@@ -68,7 +68,7 @@ class Report extends React.Component {
           this.setState({
             dataReport: res
           });
-          let chart = this.refs.reportChart.getChart();
+          let chart = this.refs.activeUsersChart.getChart();
           chart.series[0].setData(this.state.dataReport, true);
         })
     } else if (e.target.value === "Last Week") {
@@ -84,7 +84,7 @@ class Report extends React.Component {
           this.setState({
             dataReport: res
           });
-          let chart = this.refs.reportChart.getChart();
+          let chart = this.refs.activeUsersChart.getChart();
           chart.series[0].setData(this.state.dataReport, true);
         })
     }
@@ -92,24 +92,31 @@ class Report extends React.Component {
 
   render() {
 
-    const reportSelect = {
+    const activeUserPeriodSelect = {
       list: ["Last Year", "Last Month", "Last Week"],
       label: 'Period'
     };
-
+    const activeUserTypeSelect = {
+      list: ["Last Year", "Last Month", "Last Week"],
+      label: 'Type'
+    };
 
     return (
-      <Col className='Report' md={7}>
+      <Col className='ActiveUsers' md={7}>
+        <div className="select-wrap">
+          <Select onChange={this.onChange} data={activeUserPeriodSelect}/>
+          <Select onChange={this.onChange} data={activeUserTypeSelect}/>
+        </div>
         <Box>
           <Row>
             <Col xs={6}>
               <h2>Report</h2>
             </Col>
             <Col className='text-right' xs={6}>
-              <Select onChange={this.onChange} data={reportSelect}/>
+
             </Col>
           </Row>
-          <ReactHighcharts config={reportChart} ref='reportChart'>
+          <ReactHighcharts config={activeUsersChart} ref='activeUsersChart'>
           </ReactHighcharts>
         </Box>
       </Col>
@@ -118,4 +125,4 @@ class Report extends React.Component {
 
 }
 
-export default Report;
+export default ActiveUsers;

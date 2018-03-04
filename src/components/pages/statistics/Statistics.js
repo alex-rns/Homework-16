@@ -6,6 +6,7 @@ import './Statistics.css'
 import YourSales from "../../organisms/charts/YourSales";
 import Report from "../../organisms/charts/Report";
 import Stats from "../../organisms/Stats/Stats";
+import ActiveUsers from "../../organisms/charts/ActiveUsers";
 
 class Statistics extends React.Component {
 
@@ -17,7 +18,7 @@ class Statistics extends React.Component {
         <Grid fluid>
           <Row>
             <Stats/>
-            <Report/>
+            <ActiveUsers/>
           </Row>
 
           <Row>

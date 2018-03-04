@@ -18,7 +18,7 @@ class Stats extends React.Component {
       dataStatsView : 3230
     }
   }
-  
+
 
   render() {
 

@@ -175,7 +175,10 @@ class YourSales extends React.Component {
 
   render() {
 
-    const yourSalesSelect = ["Last Year", "Last Month", "Last Week"];
+    const yourSalesSelect = {
+      list: ["Last Year", "Last Month", "Last Week"],
+      label: 'Period'
+    };
 
     return (
       <Col className='YourSales' md={5}>
