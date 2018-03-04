@@ -12,13 +12,13 @@ const report = {
 
 const yourSales = {
   year: [
-    ["Social Media",195],["Adwords", 185],["E-Commerce",482],["Websites",338],["Logo", 360]
+    ["Social Media", 195], ["Adwords", 185], ["E-Commerce", 482], ["Websites", 338], ["Logo", 360]
   ],
   month: [
-    ["Social Media",75],["Adwords", 99],["E-Commerce",199],["Websites",55],["Logo", 117]
+    ["Social Media", 75], ["Adwords", 99], ["E-Commerce", 199], ["Websites", 55], ["Logo", 117]
   ],
   week: [
-    ["Social Media",2],["Adwords", 11],["E-Commerce",119],["Websites",24],["Logo", 46]
+    ["Social Media", 2], ["Adwords", 11], ["E-Commerce", 119], ["Websites", 24], ["Logo", 46]
   ]
 };
 
@@ -27,6 +27,28 @@ const activeUsers = {
   month: [400, 600, 200, 300, 100, 600, 700],
   week: [600, 200, 500, 600, 700]
 };
+
+
+const totalSales = [
+  directSales = {
+    data : [55,45],
+    chartColor: ['#dadee6', '#6082fe'],
+    percent: '45'
+  },
+  chanelSales = {
+    data : [80,20],
+    chartColor: ['#dadee6', '#a65db7'],
+    percent: '20'
+  },
+  chanelTwoSales = {
+    data : [75,25],
+    chartColor: ['#dadee6', '#f03877'],
+    percent: '25'
+  },
+
+];
+
+
 
 //Login
 
@@ -95,6 +117,22 @@ App.get('/api/user/activeUsers/week', (req, res) => {
   return res.json(activeUsers.week)
 });
 
+
+//Total Sales Chart
+
+App.get('/api/user/totalSales/direct', (req, res) => {
+  return res.json(totalSales[0])
+});
+
+App.get('/api/user/totalSales/chanel', (req, res) => {
+  return res.json(totalSales[1])
+});
+
+App.get('/api/user/totalSales/chanelTwo', (req, res) => {
+  return res.json(totalSales[2])
+});
+
 App.listen(4000, () => {
   console.log('server is started')
+
 });

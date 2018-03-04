@@ -1,95 +1,73 @@
 import React from 'react';
 import ReactHighcharts from 'react-highcharts';
 import {Row, Col} from 'react-bootstrap/lib';
+import './TotalSales.css'
 
 //component
 import Box from '../../../atoms/Box/Box'
 
 //config
-import activeUsersChart from "../../../../config/activeUsersChart.config";
+import totalSalesChart from "../../../../config/totalSalesChart.config";
 import ChangeChartButton from "../../../atoms/buttons/ChangeChartButton/ChangeChartButton";
 import DelChartButton from "../../../atoms/buttons/DelChartButton/DelChartButton";
 
 class TotalSales extends React.Component {
 
-  // constructor(props) {
-  //   super(props);
-  //
-  //   this.state = {
-  //     dataActiveUsers: []
-  //   }
-  // }
-  //
-  // componentWillMount() {
-  //   fetch('/api/user/activeUsers/year', {
-  //     headers: {
-  //       'Content-type': 'application/json'
-  //     },
-  //     method: 'get'
-  //   })
-  //     .then(res => res.json())
-  //     .then(res => {
-  //       console.log(res);
-  //       this.setState({
-  //         dataActiveUsers: res
-  //       });
-  //       let chart = this.refs.activeUsersChart.getChart();
-  //       chart.series[0].setData(this.state.dataActiveUsers, true);
-  //     })
-  // }
-  //
-  // onChange = (e) => {
-  //   if (e.target.value === "Last Year") {
-  //     fetch('/api/user/activeUsers/year', {
-  //       headers: {
-  //         'Content-type': 'application/json'
-  //       },
-  //       method: 'get'
-  //     })
-  //       .then(res => res.json())
-  //       .then(res => {
-  //         console.log(res);
-  //         this.setState({
-  //           dataActiveUsers: res
-  //         });
-  //         let chart = this.refs.activeUsersChart.getChart();
-  //         chart.series[0].setData(this.state.dataActiveUsers, true);
-  //
-  //       })
-  //   } else if (e.target.value === "Last Month") {
-  //     fetch('/api/user/activeUsers/month', {
-  //       headers: {
-  //         'Content-type': 'application/json'
-  //       },
-  //       method: 'get'
-  //     })
-  //       .then(res => res.json())
-  //       .then(res => {
-  //         console.log(res);
-  //         this.setState({
-  //           dataActiveUsers: res
-  //         });
-  //         let chart = this.refs.activeUsersChart.getChart();
-  //         chart.series[0].setData(this.state.dataActiveUsers, true);
-  //       })
-  //   } else if (e.target.value === "Last Week") {
-  //     fetch('/api/user/activeUsers/week', {
-  //       headers: {
-  //         'Content-type': 'application/json'
-  //       },
-  //       method: 'get'
-  //     })
-  //       .then(res => res.json())
-  //       .then(res => {
-  //         console.log(res);
-  //         this.setState({
-  //           dataActiveUsers: res
-  //         });
-  //         let chart = this.refs.activeUsersChart.getChart();
-  //         chart.series[0].setData(this.state.dataActiveUsers, true);
-  //       })
-  //   }
-  // };
+
+  componentWillMount() {
+    fetch('/api/user/totalSales/direct', {
+      headers: {
+        'Content-type': 'application/json'
+      },
+      method: 'get'
+    })
+      .then(res => res.json())
+      .then(res => {
+        console.log(res);
+        let chart = this.refs.directSalesChart.getChart();
+        chart.series[0].setData(res.data);
+        chart.setTitle({
+          text: res.percent + '%'
+        });
+        console.log(res.chartColor);
+      });
+
+    fetch('/api/user/totalSales/chanel', {
+      headers: {
+        'Content-type': 'application/json'
+      },
+      method: 'get'
+    })
+      .then(res => res.json())
+      .then(res => {
+        console.log(res);
+        let chart = this.refs.chanelSales.getChart();
+        chart.series[0].setData(res.data);
+        chart.setTitle({
+          text: res.percent + '%'
+        });
+        console.log(res.chartColor);
+      });
+
+    fetch('/api/user/totalSales/chanelTwo', {
+      headers: {
+        'Content-type': 'application/json'
+      },
+      method: 'get'
+    })
+      .then(res => res.json())
+      .then(res => {
+        console.log(res);
+        let chart = this.refs.chanelTwoSales.getChart();
+        chart.series[0].setData(res.data);
+        chart.setTitle({
+          text: res.percent + '%'
+        });
+        console.log(res.chartColor);
+
+      })
+  }
+
 
   render() {
 
@@ -106,8 +84,35 @@ class TotalSales extends React.Component {
 
             </Col>
           </Row>
-          {/*<ReactHighcharts config={activeUsersChart} ref='activeUsersChart'>*/}
-          {/*</ReactHighcharts>*/}
+
+          <Row className='total-sales-charts'>
+            <Col md={4}>
+              <ReactHighcharts config={totalSalesChart} ref='directSalesChart'>
+              </ReactHighcharts>
+              <div className='total-sum'>
+                <p>2,300$</p>
+                <span>Direct Sales</span>
+              </div>
+            </Col>
+            <Col md={4}>
+              <ReactHighcharts config={totalSalesChart} ref='chanelSales'>
+              </ReactHighcharts>
+              <div className='total-sum'>
+                <p>980$</p>
+                <span>Channel Sales</span>
+              </div>
+            </Col>
+            <Col md={4}>
+              <ReactHighcharts config={totalSalesChart} ref='chanelTwoSales'>
+              </ReactHighcharts>
+              <div className='total-sum'>
+                <p>1,250$</p>
+                <span>Channel Sales</span>
+              </div>
+            </Col>
+
+          </Row>
+
         </Box>
       </Col>
     )
