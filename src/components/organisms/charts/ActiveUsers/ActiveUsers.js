@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactHighcharts from 'react-highcharts';
 import {Row, Col} from 'react-bootstrap/lib';
-import '../../pages/home/Home.css'
+import './ActiveUsers.css'
+
 //component
-import Box from '../../atoms/Box/Box'
-import Select from '../../atoms/Select/Select'
+import Box from '../../../atoms/Box/Box'
+import Select from '../../../atoms/Select/Select'
 
 //config
-import activeUsersChart from "../../../config/activeUsersChart.config";
+import activeUsersChart from "../../../../config/activeUsersChart.config";
 
 class ActiveUsers extends React.Component {
 
@@ -15,12 +16,12 @@ class ActiveUsers extends React.Component {
     super(props);
 
     this.state = {
-      dataReport: []
+      dataActiveUsers: []
     }
   }
 
   componentWillMount() {
-    fetch('/api/user/report/year', {
+    fetch('/api/user/activeUsers/year', {
       headers: {
         'Content-type': 'application/json'
       },
@@ -30,16 +31,16 @@ class ActiveUsers extends React.Component {
       .then(res => {
         console.log(res);
         this.setState({
-          dataReport: res
+          dataActiveUsers: res
         });
         let chart = this.refs.activeUsersChart.getChart();
-        chart.series[0].setData(this.state.dataReport, true);
+        chart.series[0].setData(this.state.dataActiveUsers, true);
       })
   }
 
   onChange = (e) => {
     if (e.target.value === "Last Year") {
-      fetch('/api/user/report/year', {
+      fetch('/api/user/activeUsers/year', {
         headers: {
           'Content-type': 'application/json'
         },
@@ -49,14 +50,14 @@ class ActiveUsers extends React.Component {
         .then(res => {
           console.log(res);
           this.setState({
-            dataReport: res
+            dataActiveUsers: res
           });
           let chart = this.refs.activeUsersChart.getChart();
-          chart.series[0].setData(this.state.dataReport, true);
+          chart.series[0].setData(this.state.dataActiveUsers, true);
 
         })
     } else if (e.target.value === "Last Month") {
-      fetch('/api/user/report/month', {
+      fetch('/api/user/activeUsers/month', {
         headers: {
           'Content-type': 'application/json'
         },
@@ -66,13 +67,13 @@ class ActiveUsers extends React.Component {
         .then(res => {
           console.log(res);
           this.setState({
-            dataReport: res
+            dataActiveUsers: res
           });
           let chart = this.refs.activeUsersChart.getChart();
-          chart.series[0].setData(this.state.dataReport, true);
+          chart.series[0].setData(this.state.dataActiveUsers, true);
         })
     } else if (e.target.value === "Last Week") {
-      fetch('/api/user/report/week', {
+      fetch('/api/user/activeUsers/week', {
         headers: {
           'Content-type': 'application/json'
         },
@@ -82,10 +83,10 @@ class ActiveUsers extends React.Component {
         .then(res => {
           console.log(res);
           this.setState({
-            dataReport: res
+            dataActiveUsers: res
           });
           let chart = this.refs.activeUsersChart.getChart();
-          chart.series[0].setData(this.state.dataReport, true);
+          chart.series[0].setData(this.state.dataActiveUsers, true);
         })
     }
   };
@@ -97,22 +98,23 @@ class ActiveUsers extends React.Component {
       label: 'Period'
     };
     const activeUserTypeSelect = {
-      list: ["Last Year", "Last Month", "Last Week"],
+      list: ["Notifications", "2", "3"],
       label: 'Type'
     };
 
     return (
       <Col className='ActiveUsers' md={7}>
-        <div className="select-wrap">
+        <div className="user-select-wrap">
           <Select onChange={this.onChange} data={activeUserPeriodSelect}/>
-          <Select onChange={this.onChange} data={activeUserTypeSelect}/>
+          <Select data={activeUserTypeSelect}/>
         </div>
         <Box>
           <Row>
             <Col xs={6}>
-              <h2>Report</h2>
+              <h2>Active Users</h2>
             </Col>
             <Col className='text-right' xs={6}>
+              123
 
             </Col>
           </Row>

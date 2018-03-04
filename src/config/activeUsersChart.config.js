@@ -1,7 +1,7 @@
 const ActiveUsersChart = {
   chart: {
     type: 'spline',
-    height: '300'
+    height: '250'
   },
   title: {
     text: null

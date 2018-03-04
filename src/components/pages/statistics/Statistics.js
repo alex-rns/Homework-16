@@ -1,12 +1,9 @@
 import React from 'react';
 import {Grid, Row} from 'react-bootstrap/lib';
-import './Statistics.css'
 
 //component
-import YourSales from "../../organisms/charts/YourSales";
-import Report from "../../organisms/charts/Report";
 import Stats from "../../organisms/Stats/Stats";
-import ActiveUsers from "../../organisms/charts/ActiveUsers";
+import ActiveUsers from "../../organisms/charts/ActiveUsers/ActiveUsers";
 
 class Statistics extends React.Component {
 

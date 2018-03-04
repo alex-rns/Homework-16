@@ -22,6 +22,12 @@ const yourSales = {
   ]
 };
 
+const activeUsers = {
+  year: [300, 250, 100, 600, 200, 300, 100, 600, 300, 500, 600, 700],
+  month: [400, 600, 200, 300, 100, 600, 700],
+  week: [600, 200, 500, 600, 700]
+};
+
 //Login
 
 const userExist = {
@@ -75,7 +81,19 @@ App.get('/api/user/report/week', (req, res) => {
   return res.json(report.week)
 });
 
+//Active Users Chart
 
+App.get('/api/user/activeUsers/year', (req, res) => {
+  return res.json(activeUsers.year)
+});
+
+App.get('/api/user/activeUsers/month', (req, res) => {
+  return res.json(activeUsers.month)
+});
+
+App.get('/api/user/activeUsers/week', (req, res) => {
+  return res.json(activeUsers.week)
+});
 
 App.listen(4000, () => {
   console.log('server is started')
