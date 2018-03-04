@@ -6,6 +6,9 @@ import Stats from "../../organisms/Stats/Stats";
 import ActiveUsers from "../../organisms/charts/ActiveUsers/ActiveUsers";
 import TotalSales from "../../organisms/charts/TotalSales/TotalSales";
 
+const testWidth = 400;
+
+
 class Statistics extends React.Component {
 
   render() {
@@ -15,8 +18,8 @@ class Statistics extends React.Component {
 
         <Grid fluid>
           <Row>
-            <Stats/>
-            <ActiveUsers/>
+            <Stats width={testWidth}/>
+            <ActiveUsers width={testWidth}/>
           </Row>
 
           <Row>
