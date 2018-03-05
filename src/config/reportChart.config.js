@@ -20,6 +20,13 @@ const ReportChart = {
         max: 700,
         min: 100,
         tickInterval: 100,
+      labels: {
+        style: {
+          color: "#cdd3df",
+          fontSize: "16px",
+          fontWeight: "700"
+        }
+      }
 
     },
     plotOptions: {
