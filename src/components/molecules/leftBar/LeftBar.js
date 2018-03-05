@@ -28,7 +28,7 @@ class LeftBar extends React.Component {
         <nav className="nav-bar">
           <ul>
             <li className="nav-item">
-              <NavLink onClick={this.props.handleLinkClick} exact to="/">
+              <NavLink activeClassName="active" onClick={this.props.handleLinkClick} exact to="/">
                 <FontAwesome
                   className='nav-icon nav-icon-home'
                   name='home'
@@ -36,7 +36,7 @@ class LeftBar extends React.Component {
                 Home </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink onClick={this.props.handleLinkClick} exact to="/workflow">
+              <NavLink activeClassName="active" onClick={this.props.handleLinkClick} exact to="/workflow">
                 <FontAwesome
                   className='nav-icon nav-icon-home'
                   name='list-ol'
@@ -44,7 +44,7 @@ class LeftBar extends React.Component {
                 Workflow </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink onClick={this.props.handleLinkClick} exact to="/statistics">
+              <NavLink activeClassName="active" onClick={this.props.handleLinkClick} exact to="/statistics">
                 <FontAwesome
                   className='nav-icon nav-icon-home'
                   name='chart-line'
@@ -52,7 +52,7 @@ class LeftBar extends React.Component {
                 Statistics </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink onClick={this.props.handleLinkClick} exact to="/calendar">
+              <NavLink activeClassName="active" onClick={this.props.handleLinkClick} exact to="/calendar">
                 <FontAwesome
                   className='nav-icon nav-icon-home'
                   name='calendar'
@@ -60,7 +60,7 @@ class LeftBar extends React.Component {
                 Calendar </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink onClick={this.props.handleLinkClick} exact to="/users">
+              <NavLink activeClassName="active" onClick={this.props.handleLinkClick} exact to="/users">
                 <FontAwesome
                   className='nav-icon nav-icon-home'
                   name='user'
@@ -68,7 +68,7 @@ class LeftBar extends React.Component {
                 Users </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink onClick={this.props.handleLinkClick} exact to="/settings">
+              <NavLink activeClassName="active" onClick={this.props.handleLinkClick} exact to="/settings">
                 <FontAwesome
                   className='nav-icon nav-icon-home'
                   name='cog'

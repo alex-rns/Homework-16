@@ -18,7 +18,7 @@ const SalesChart = {
     },
     verticalAlign: 'middle',
     floating: true,
-    x: -80,
+    x: -90,
     y: 0
   },
   subtitle: {
@@ -29,7 +29,7 @@ const SalesChart = {
     },
     verticalAlign: 'middle',
     floating: true,
-    x: -80,
+    x: -90,
     y: 24,
 
   },
@@ -48,7 +48,8 @@ const SalesChart = {
       height: '23px',
       width: '63px'
     },
-    width: 140
+    width: 160
+
   },
   series: [{
     innerSize: '60%',
