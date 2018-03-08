@@ -7,9 +7,19 @@ import './TotalSales.css'
 import Box from '../../../atoms/Box/Box'
 
 //config
-import totalSalesChart from "../../../../config/totalSalesChart.config";
+import basicTotalSalesChart from "../../../../config/basicTotalSalesChart.config";
+import directSalesChart from "../../../../config/directSalesChart.config";
+import chanelSalesChart from "../../../../config/chanelSalesChart.config";
+import chanelTwoSalesChart from "../../../../config/chanelTwoSalesChart.config";
+
+
 import ChangeChartButton from "../../../atoms/buttons/ChangeChartButton/ChangeChartButton";
 import DelChartButton from "../../../atoms/buttons/DelChartButton/DelChartButton";
+
+let direct = Object.assign({}, basicTotalSalesChart, directSalesChart);
+let chanel = Object.assign({}, basicTotalSalesChart, chanelSalesChart);
+let chanelTwo = Object.assign({}, basicTotalSalesChart, chanelTwoSalesChart);
+
 
 class TotalSales extends React.Component {
 
@@ -71,6 +81,8 @@ class TotalSales extends React.Component {
 
   render() {
 
+
+
     return (
       <Col className='TotalSales' md={12}>
         <Box>
@@ -87,7 +99,7 @@ class TotalSales extends React.Component {
 
           <Row className='total-sales-charts'>
             <Col md={4}>
-              <ReactHighcharts config={totalSalesChart} ref='directSalesChart'>
+              <ReactHighcharts config={direct} ref='directSalesChart'>
               </ReactHighcharts>
               <div className='total-sum'>
                 <p>2,300$</p>
@@ -95,7 +107,7 @@ class TotalSales extends React.Component {
               </div>
             </Col>
             <Col md={4}>
-              <ReactHighcharts config={totalSalesChart} ref='chanelSales'>
+              <ReactHighcharts config={chanel} ref='chanelSales'>
               </ReactHighcharts>
               <div className='total-sum'>
                 <p>980$</p>
@@ -103,7 +115,7 @@ class TotalSales extends React.Component {
               </div>
             </Col>
             <Col md={4}>
-              <ReactHighcharts config={totalSalesChart} ref='chanelTwoSales'>
+              <ReactHighcharts config={chanelTwo} ref='chanelTwoSales'>
               </ReactHighcharts>
               <div className='total-sum'>
                 <p>1,250$</p>

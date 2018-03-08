@@ -26,7 +26,6 @@ const ActiveUsersChart = {
         fontSize: "16px",
         fontWeight: "700"
       }
-
     }
 
   },
