@@ -1,17 +1,16 @@
 import React from 'react';
-import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
+import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 import 'react-bootstrap-table/dist/react-bootstrap-table-all.min.css'
 import './UserTable.css'
 import onlineIndicator from '../../../assets/img/online-indicator.png'
 import FontAwesome from 'react-fontawesome';
 
 
-
 class UserTable extends React.Component {
 
   userNameBlock = (cell, row) => {
     return (
-      <div className="user-name-block" style={{display:'flex', alignItems:'center'}}>
+      <div className="user-name-block" style={{display: 'flex', alignItems: 'center'}}>
         <div className="user-image">
           <img className="user-photo" src={row.userPhoto} alt={row.userName}/>
           {
@@ -28,22 +27,21 @@ class UserTable extends React.Component {
   };
 
 
-
-  lastActivityBlock =(cell, row) => {
-    return(
+  lastActivityBlock = (cell, row) => {
+    return (
       <div className="last-activity-block">
-        <p className = {row.active ? 'online-now': ''}>
+        <p className={row.active ? 'online-now' : ''}>
           <FontAwesome
-          className='task-time-icon'
-          name='clock'
-        />
+            className='task-time-icon'
+            name='clock'
+          />
           {row.lastActivity}</p>
       </div>
     )
   };
 
-  emailBlock =(cell, row) => {
-    return(
+  emailBlock = (cell, row) => {
+    return (
       <div className="mail-and-phone-block">
         <p>
           {row.email}</p>
@@ -51,8 +49,8 @@ class UserTable extends React.Component {
     )
   };
 
-  phoneBlock =(cell, row) => {
-    return(
+  phoneBlock = (cell, row) => {
+    return (
       <div className="mail-and-phone-block">
         <p>
           {row.phone}</p>
@@ -60,15 +58,15 @@ class UserTable extends React.Component {
     )
   };
 
-  buttonBlock =() => {
-    return(
-      <div className="button-block">
+  buttonBlock = () => {
+    return (
+      <button className="button-block">
         <FontAwesome
           className='dropdown-button-icon'
           name='ellipsis-v'
           size='2x'
         />
-      </div>
+      </button>
     )
   };
 
@@ -79,36 +77,46 @@ class UserTable extends React.Component {
     return (
       <div>
         <BootstrapTable
-          headerStyle={ { background: '#f6f7fa', font: '400 1.2vmax Roboto' }}
-          containerStyle={ { background: '#fff' }}
+          bordered={false}
+          headerStyle={{background: '#f6f7fa', font: '400 1.2vmax Roboto', paddingLeft: 20}}
+          containerStyle={{background: '#fff'}}
           data={this.props.data}
           pagination>
 
           <TableHeaderColumn
-
+            thStyle={{'border': 'none'}}
+            width='30%'
             dataField='userName'
             isKey
             dataFormat={this.userNameBlock}
           >Name</TableHeaderColumn>
 
           <TableHeaderColumn
+
+            thStyle={{'border': 'none'}}
+            width='20%'
             dataField='lastActivity'
             dataFormat={this.lastActivityBlock}
           >Last activity</TableHeaderColumn>
 
 
           <TableHeaderColumn
+            thStyle={{'border': 'none'}}
+            width='20%'
             dataField='email'
             dataFormat={this.emailBlock}
           >Mail</TableHeaderColumn>
 
 
           <TableHeaderColumn
+            thStyle={{'border': 'none'}}
+            width='20%'
             dataField='phone'
             dataFormat={this.phoneBlock}
           >Phone</TableHeaderColumn>
 
           <TableHeaderColumn
+            thStyle={{'border': 'none'}}
             width='10%'
             dataField='button'
             dataFormat={this.buttonBlock}
