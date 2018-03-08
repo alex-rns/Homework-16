@@ -49,7 +49,6 @@ const totalSales = [
 ];
 
 
-
 //Login
 
 const userExist = {
