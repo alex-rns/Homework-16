@@ -13,6 +13,10 @@ import Authentication from "./components/pages/authentication/Authentication";
 import PageNotFound from "./components/pages/PageNotFound/PageNotFound";
 import PrivateRouter from "./PrivateRouter";
 
+import localizer from 'react-big-calendar/lib/localizers/globalize'
+import globalize from 'globalize'
+
+localizer(globalize);
 
 const App =() => {
     return (

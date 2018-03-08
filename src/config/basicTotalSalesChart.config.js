@@ -5,12 +5,7 @@ const TotalSalesChart = {
     height: '190',
     width:'190',
   },
-  //
-  // plotOptions: {
-  //   pie: {
-  //     colors: ['#dadee6', '#6082fe'],
-  //   }
-  // },
+
 
   title: {
     text: '',
