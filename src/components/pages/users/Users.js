@@ -406,6 +406,9 @@ const users = [
 ];
 
 
+
+
+
 class Users extends React.Component {
 
   constructor(props) {
@@ -452,17 +455,14 @@ class Users extends React.Component {
         activeUsers: users
       });
     }
-
-
   };
 
   render() {
 
-
     return (
       <div className="Users">
         <div className="users-header">
-          <h2>Users <span>({users.length})</span></h2>
+          <h2>Users <span>({this.state.activeUsers.length})</span></h2>
           <Select onChange={this.onChange} data={usersSelect}/>
         </div>
 
