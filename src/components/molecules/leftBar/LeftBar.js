@@ -56,6 +56,18 @@ class LeftBar extends React.Component {
                 activeStyle={{ backgroundColor: '#122143', borderLeft: "10px solid #5584ff" }}
                 onClick={this.props.handleLinkClick}
                 exact
+                to="/workflowtest">
+                <FontAwesome
+                  className='nav-icon nav-icon-home'
+                  name='list-ol'
+                />
+                Workflowtest </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                activeStyle={{ backgroundColor: '#122143', borderLeft: "10px solid #5584ff" }}
+                onClick={this.props.handleLinkClick}
+                exact
                 to="/statistics">
                 <FontAwesome
                   className='nav-icon nav-icon-home'
@@ -85,17 +97,6 @@ class LeftBar extends React.Component {
                   name='user'
                 />
                 Users </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink
-                activeStyle={{ backgroundColor: '#122143', borderLeft: "10px solid #5584ff" }}
-                onClick={this.props.handleLinkClick}
-                exact
-                to="/settings">
-                <FontAwesome
-                  className='nav-icon nav-icon-home'
-                  name='cog'
-                /> Settings </NavLink>
             </li>
           </ul>
         </nav>
