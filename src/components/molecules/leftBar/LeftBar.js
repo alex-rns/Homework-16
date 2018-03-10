@@ -51,18 +51,7 @@ class LeftBar extends React.Component {
                 />
                 Workflow </NavLink>
             </li>
-            <li className="nav-item">
-              <NavLink
-                activeStyle={{ backgroundColor: '#122143', borderLeft: "10px solid #5584ff" }}
-                onClick={this.props.handleLinkClick}
-                exact
-                to="/workflowtest">
-                <FontAwesome
-                  className='nav-icon nav-icon-home'
-                  name='list-ol'
-                />
-                Workflowtest </NavLink>
-            </li>
+
             <li className="nav-item">
               <NavLink
                 activeStyle={{ backgroundColor: '#122143', borderLeft: "10px solid #5584ff" }}

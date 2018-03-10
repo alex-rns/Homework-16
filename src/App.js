@@ -4,7 +4,6 @@ import './App.css'
 
 //components
 import Workflow from "./components/pages/workflow/Workflow";
-import WorkflowTest from "./components/pages/workflow/WorkflowTest";
 import Calendar from "./components/pages/calendar/Calendar";
 import Statistics from "./components/pages/statistics/Statistics";
 import Settings from "./components/pages/settings/Settings";
@@ -29,7 +28,6 @@ const App =() => {
 
             <PrivateRouter exact path="/" component={Home}/>
             <PrivateRouter exact path="/workflow" component={Workflow}/>
-            <PrivateRouter exact path="/workflowtest" component={WorkflowTest}/>
             <PrivateRouter exact path="/statistics" component={Statistics}/>
             <PrivateRouter exact path="/calendar" component={Calendar}/>
             <PrivateRouter exact path="/users" component={Users}/>
