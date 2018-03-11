@@ -48,7 +48,26 @@ const totalSales = [
 
 ];
 
-
+const dataTask = [
+  {
+    title: 'New website for Symu.co',
+    deadline: '5 days delays',
+    deadlineCheck: true
+  },
+  {
+    title: 'Free business PSD Template',
+    deadline: '2 days delays',
+    deadlineCheck: true
+  },
+  {
+    title: 'New logo for JCD.pl',
+    deadline: '5 days left'
+  },
+  {
+    title: 'Free Icons Set vol. 3',
+    deadline: '10 days left'
+  },
+];
 //Login
 
 const userExist = {
@@ -130,6 +149,14 @@ App.get('/api/user/totalSales/chanel', (req, res) => {
 App.get('/api/user/totalSales/chanelTwo', (req, res) => {
   return res.json(totalSales[2])
 });
+
+
+//Home Task
+
+App.get('/api/user/home/task', (req, res) => {
+  return res.json(dataTask)
+});
+
 
 App.listen(4000, () => {
   console.log('server is started')

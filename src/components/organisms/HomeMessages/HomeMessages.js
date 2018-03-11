@@ -16,29 +16,29 @@ const dataMessage = [
     userName: 'Nina Jones',
     onlineTime: '5 minutes ago',
     text: 'Hey You! It’s me again :-) I attached new',
-    read: 'noread'
+    read: true
   },
   {
     userAvatar: user1,
     userName: 'Nina Jones',
     onlineTime: '5 minutes ago',
     text: 'Hey You! It’s me again :-) I attached new',
-    read: 'noread'
+    read: true
   },
   {
     userAvatar: user2,
     userName: 'James Smith ',
     onlineTime: '5 minutes ago',
     text: 'Hey You! It’s me again :-) I attached new',
-    read: 'readed'
+    read: false
   },
   {
     userAvatar: user1,
     userName: 'Nina Jones',
     onlineTime: '5 minutes ago',
     text: 'Hey You! It’s me again :-) I attached new',
-    read: 'readed'
-  },
+    read: false
+  }
 ];
 
 class HomeMessages extends React.Component {
@@ -50,7 +50,7 @@ class HomeMessages extends React.Component {
           <div className="home-tasks-header">
             <h3>Messages</h3>
             <div className="deadline-button-wrap">
-              <InfoCircle/>
+              <InfoCircle dataq={dataMessage.length}/>
             </div>
           </div>
         </Box>

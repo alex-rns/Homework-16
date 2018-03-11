@@ -49,7 +49,7 @@ class HomeActivity extends React.Component {
           <div className="home-tasks-header">
             <h3>Activity</h3>
             <div className="deadline-button-wrap">
-              <InfoCircle/>
+              <InfoCircle dataq={dataActivity.length}/>
             </div>
           </div>
         </Box>
