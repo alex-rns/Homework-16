@@ -4,15 +4,10 @@ import './InfoCircle.css'
 //components
 
 class InfoCircle extends React.Component {
-  render() {
-    return (
+  render(){
+    return(
       <div className='CircleLetter'>
-
-          <span>
-            {this.props.data || this.props.dataq}
-          </span>
-
-
+        <span>{this.props.data || this.props.dataq}</span>
       </div>
     )
   }
