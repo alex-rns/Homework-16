@@ -1,10 +1,12 @@
 {
   "name": "homework-16",
+  "homepage": "https://alex-rns.github.io/homework-16",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
+    "gh-pages": "^1.1.0",
     "globalize": "^0.1.1",
     "lodash": "^4.17.5",
     "moment": "^2.21.0",
@@ -36,7 +38,9 @@
     "build-js": "react-scripts build",
     "build": "npm-run-all build-css build-js",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "proxy": "http://localhost:4000"
 }
